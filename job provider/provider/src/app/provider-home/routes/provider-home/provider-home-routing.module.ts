@@ -11,6 +11,9 @@ const routes: Routes = [{
     },
     {
       path: 'addnew', loadChildren: () => import('../../../add-new/add-new.module').then(m => m.AddNewModule)
+    },
+    {
+      path: 'settings', loadChildren: () => import('../../../settings/settings.module').then(m => m.SettingsModule)
     }
   ]
 }];
