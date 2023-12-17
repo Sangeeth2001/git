@@ -16,6 +16,9 @@ export class SidebarComponent {
   navigatetoAddnew(){
     this.router.navigate(['home/addnew']);
   }
+  navigatetosettings(){
+    this.router.navigate(['home/settings']);
+  }
 
 
 

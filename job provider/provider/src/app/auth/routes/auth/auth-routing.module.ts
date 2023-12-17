@@ -5,7 +5,7 @@ import { LoginComponent } from '../../components/login/login.component';
 import { HomeComponent } from 'src/app/provider-home/components/home/home.component';
 import { DashboardHomeComponent } from 'src/app/dashboard/components/dashboard-home/dashboard-home.component';
 import { AddMemberComponent } from 'src/app/add-new/components/add-member/add-member.component';
-import { RemoveMemberComponent } from 'src/app/add-new/components/remove-member/remove-member.component';
+import { ChangePasswordComponent } from 'src/app/settings/components/change-password/change-password.component';
 
 const routes: Routes = [{
   path:'',component:AuthHomeComponent,
@@ -25,7 +25,9 @@ const routes: Routes = [{
     {
        path:'addnew', component:AddMemberComponent
     },
-    
+    {
+      path:'settings', component:ChangePasswordComponent
+   },
   ]
 }];
 

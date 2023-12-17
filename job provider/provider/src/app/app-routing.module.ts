@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RemoveMemberComponent } from './add-new/components/remove-member/remove-member.component';
 
 const routes: Routes = [{
   path:'',loadChildren: ()=>import('./auth/auth.module').then(m=>m.AuthModule)
@@ -14,8 +13,9 @@ const routes: Routes = [{
 {
   path: 'addnew', loadChildren: () => import('./add-new/add-new.module').then(m => m.AddNewModule)
 },
-
-
+{
+  path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule)
+}
 
 ];
 
