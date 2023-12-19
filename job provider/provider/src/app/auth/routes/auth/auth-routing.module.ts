@@ -6,6 +6,7 @@ import { HomeComponent } from 'src/app/provider-home/components/home/home.compon
 import { DashboardHomeComponent } from 'src/app/dashboard/components/dashboard-home/dashboard-home.component';
 import { AddMemberComponent } from 'src/app/add-new/components/add-member/add-member.component';
 import { ChangePasswordComponent } from 'src/app/settings/components/change-password/change-password.component';
+import { ListJobsComponent } from 'src/app/jobs/components/list-jobs/list-jobs.component';
 
 const routes: Routes = [{
   path:'',component:AuthHomeComponent,
@@ -18,16 +19,16 @@ const routes: Routes = [{
     },
     {
       path:'home',component:HomeComponent   
-    },
-    {
-       path:'dashboard', component:DashboardHomeComponent
-    },
-    {
-       path:'addnew', component:AddMemberComponent
-    },
-    {
-      path:'settings', component:ChangePasswordComponent
-   },
+    }
+  //   {
+  //      path:'dashboard', component:DashboardHomeComponent
+  //   },
+  //   {
+  //      path:'addnew', component:AddMemberComponent
+  //   },
+  //   {
+  //     path:'settings', component:ChangePasswordComponent
+  //  },
   ]
 }];
 

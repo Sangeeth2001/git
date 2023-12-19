@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ListJobsComponent } from './components/list-jobs/list-jobs.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ListJobsComponent
+  ],
   imports: [
     CommonModule
   ]
