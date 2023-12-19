@@ -14,7 +14,14 @@ const routes: Routes = [{
     },
     {
       path: 'settings', loadChildren: () => import('../../../settings/settings.module').then(m => m.SettingsModule)
+    },
+    {
+      path:'jobs', loadChildren: () => import('../../../jobs/jobs.module').then(m => m.JobsModule)
+    },
+    {
+      path:'remove', loadChildren: () => import('../../../add-new/add-new.module').then(m => m.AddNewModule)
     }
+
   ]
 }];
 
