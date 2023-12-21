@@ -6,6 +6,7 @@ import { HomeComponent } from 'src/app/provider-home/components/home/home.compon
 import { DashboardHomeComponent } from 'src/app/dashboard/components/dashboard-home/dashboard-home.component';
 import { AddMemberComponent } from 'src/app/add-new/components/add-member/add-member.component';
 import { ChangePasswordComponent } from 'src/app/settings/components/change-password/change-password.component';
+import { JobComponentsComponent } from 'src/app/jobs/components/job-components/job-components.component';
 
 const routes: Routes = [{
   path:'',component:AuthHomeComponent,
@@ -27,6 +28,9 @@ const routes: Routes = [{
     },
     {
       path:'settings', component:ChangePasswordComponent
+   },
+   {
+      path:'jobs',component:JobComponentsComponent
    },
   ]
 }];
