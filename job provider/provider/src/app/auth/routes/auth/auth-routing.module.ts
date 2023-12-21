@@ -6,11 +6,8 @@ import { HomeComponent } from 'src/app/provider-home/components/home/home.compon
 import { DashboardHomeComponent } from 'src/app/dashboard/components/dashboard-home/dashboard-home.component';
 import { AddMemberComponent } from 'src/app/add-new/components/add-member/add-member.component';
 import { ChangePasswordComponent } from 'src/app/settings/components/change-password/change-password.component';
-<<<<<<< HEAD
 import { JobComponentsComponent } from 'src/app/jobs/components/job-components/job-components.component';
-=======
 import { ListJobsComponent } from 'src/app/jobs/components/list-jobs/list-jobs.component';
->>>>>>> edc4b702574c5638efe8421e9fcb4154e3598ca8
 
 const routes: Routes = [{
   path:'',component:AuthHomeComponent,
@@ -23,7 +20,6 @@ const routes: Routes = [{
     },
     {
       path:'home',component:HomeComponent   
-<<<<<<< HEAD
     },
     {
        path:'dashboard', component:DashboardHomeComponent
@@ -37,20 +33,10 @@ const routes: Routes = [{
    {
       path:'jobs',component:JobComponentsComponent
    },
-=======
-    }
-  //   {
-  //      path:'dashboard', component:DashboardHomeComponent
-  //   },
-  //   {
-  //      path:'addnew', component:AddMemberComponent
-  //   },
-  //   {
-  //     path:'settings', component:ChangePasswordComponent
-  //  },
->>>>>>> edc4b702574c5638efe8421e9fcb4154e3598ca8
   ]
-}];
+    }
+  ]
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
