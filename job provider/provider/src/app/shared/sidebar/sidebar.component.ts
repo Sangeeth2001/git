@@ -19,4 +19,7 @@ export class SidebarComponent {
   navigatetosettings(){
     this.router.navigate(['home/settings']);
   }
+  navigatetoapplication(){
+    this.router.navigate(['home/applications']);
+  }
 }
