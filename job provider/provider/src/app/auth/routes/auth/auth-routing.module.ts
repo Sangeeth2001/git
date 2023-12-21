@@ -21,18 +21,6 @@ const routes: Routes = [{
     {
       path:'home',component:HomeComponent   
     },
-    {
-       path:'dashboard', component:DashboardHomeComponent
-    },
-    {
-       path:'addnew', component:AddMemberComponent
-    },
-    {
-      path:'settings', component:ChangePasswordComponent
-   },
-   {
-      path:'jobs',component:JobComponentsComponent
-   },
   ]
     }
   ]
