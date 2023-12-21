@@ -1,1 +1,85 @@
-<p>change-username works!</p>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+
+        <div class="col py-4">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                          <ul class="navbar-nav ali ml-5 pl-5">
+                            <li class="nav-item pl-5 ml-4">
+                              <a class="nav-link" [routerLink]="['settings/companyprofile']">Company Profile </a>
+                            </li>
+                            <li class="nav-item pl-5 ml-4">
+                              <a class="nav-link" [routerLink]="['settings/updateprofile']">Update Profile</a>
+                            </li>
+                            <li class="nav-item pl-5 ml-4 active">
+                              <a class="nav-link" [routerLink]="['settings/changeusername']">Change Username</a>
+                            </li>
+                            <li class="nav-item pl-5 ml-4">
+                              <a class="nav-link" [routerLink]="['changeusername/changepassword']">Change Password</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </nav>
+
+                    <div class="formdiv py-4 ml-5 pl-5 shadow">
+                        <div class="h4">Password Username</div>
+                        <hr class="line2" width="85%">
+
+                        <form [formGroup]="changeusernameForm" (ngSubmit)="postData()">
+                            <div class="form-group">
+                                <label for="name" class="form-label"><b>Full Name</b></label>
+                                <input type="text" id="name" placeholder="Please enter your Full Name" class="form-control bg-light shadow-sm border-0 w-75" formControlName="fname" required>
+                                <span *ngIf="changeusernameForm.controls['fname'].touched && changeusernameForm.controls['fname'].hasError('required')" class="text-danger"> Enter Full Name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="form-label"><b>User Name</b></label>
+                                <input type="text" id="name" placeholder="Please enter your User Name" class="form-control bg-light shadow-sm border-0 w-75" formControlName="uname" required>
+                                <span *ngIf="changeusernameForm.controls['uname'].touched && changeusernameForm.controls['uname'].hasError('required')" class="text-danger"> Enter User Name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" class="form-control bg-light shadow-sm border-0 w-75" aria-describedby="emailHelp" placeholder="Enter email" formControlName="emailadd" required>
+                                <span *ngIf="changeusernameForm.controls['emailadd'].touched && changeusernameForm.controls['emailadd'].hasError('required')" class="text-danger"> Enter Email Address</span>
+                                <span *ngIf="changeusernameForm.controls['emailadd'].touched && changeusernameForm.controls['emailadd'].hasError('email')" class="text-danger"> Enter Valid Email</span>
+                                <span *ngIf="changeusernameForm.controls['emailadd'].touched && changeusernameForm.controls['emailadd'].hasError('minLength')" class="text-danger"> Minimum 5 characters required</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phnnumber" class="form-label"><b>Phone Number</b></label>
+                                <input type="number" id="cpass" placeholder="Please enter your password again" class="form-control bg-light shadow-sm border-0 w-75" formControlName="pnum" required>
+                                <span *ngIf="changeusernameForm.controls['pnum'].touched && changeusernameForm.controls['pnum'].hasError('pattern')" class="text-danger"> minimum 10 character required</span>
+                                
+                            </div>
+                            <div class="lastdiv d-flex  align-items-center">
+                                <div class="mb-3 pl-5 d-md-block">
+                                    <button class="btn btn-primary" [disabled]="changeusernameForm.invalid">Update Password</button>
+                                </div>
+                                <div class="mb-3 pl-5 d-md-block d-none d-sm-inline">
+                                    <a class="text-decoration-none text-dark" href="#">Push Notification</a>
+                                    <img src="images/Group 14.png" alt="">
+                                </div>
+                                <div class="mb-3 pl-5 d-md-block d-none d-sm-inline d-md-inline">
+                                    <a class="text-decoration-none text-dark" href="#">Email Notification</a>
+                                    <img src="images/Group 14.png" alt="">
+                                </div>
+                            </div>
+                            
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
