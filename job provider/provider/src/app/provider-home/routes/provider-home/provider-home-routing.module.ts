@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../../components/home/home.component';
+import { DashboardComponent } from 'src/app/dashboard/components/dashboard/dashboard.component';
 
-const routes: Routes = [{
+const routes: Routes = [
+  {
   path: 'home', component:HomeComponent,
   children: [
-
+  
     {
       path: 'dashboard', loadChildren: () => import('../../../dashboard/dashboard.module').then(m => m.DashboardModule)
     },
@@ -19,9 +21,9 @@ const routes: Routes = [{
     {
       path:'jobs', loadChildren: () => import('../../../jobs/jobs.module').then(m => m.JobsModule)
     },
-    {
-      path:'remove', loadChildren: () => import('../../../add-new/add-new.module').then(m => m.AddNewModule)
-    },
+    // {
+    //   path:'remove', loadChildren: () => import('../../../add-new/add-new.module').then(m => m.AddNewModule)
+    // },
     {
       path:'applications', loadChildren: () => import('../../../application/application.module').then(m => m.ApplicationModule)
     },
@@ -31,10 +33,9 @@ const routes: Routes = [{
     {
       path:'message', loadChildren: () => import('../../../message/message.module').then(m => m.MessageModule)
     },
-
-
   ]
-}];
+}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
