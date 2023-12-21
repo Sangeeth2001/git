@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MessagesComponent } from './messages/messages.component';
+import { MessageParentComponent } from './components/message-parent/message-parent.component';
+import { MessageChildComponent } from './components/message-child/message-child.component';
+import { MessagesRoutingModule } from './routes/messages/messages-routing.module';
 
 
 
 @NgModule({
   declarations: [
-    MessagesComponent
+    MessageParentComponent,
+    MessageChildComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MessagesRoutingModule
   ]
 })
 export class MessageModule { }
