@@ -20,12 +20,11 @@ const routes: Routes = [{
       path:'jobs', loadChildren: () => import('../../../jobs/jobs.module').then(m => m.JobsModule)
     },
     {
-      path:'interview', loadChildren: () => import('../../../interviews/interviews.module').then(m => m.InterviewsModule)
+      path:'remove', loadChildren: () => import('../../../add-new/add-new.module').then(m => m.AddNewModule)
     },
     {
-      path:'message', loadChildren: () => import('../../../message/message.module').then(m => m.MessageModule)
+      path:'applications', loadChildren: () => import('../../../application/application.module').then(m => m.ApplicationModule)
     },
-   
 
   ]
 }];
