@@ -21,7 +21,10 @@ const routes: Routes = [{
     },
     {
       path:'remove', loadChildren: () => import('../../../add-new/add-new.module').then(m => m.AddNewModule)
-    }
+    },
+    {
+      path:'applications', loadChildren: () => import('../../../application/application.module').then(m => m.ApplicationModule)
+    },
 
   ]
 }];
