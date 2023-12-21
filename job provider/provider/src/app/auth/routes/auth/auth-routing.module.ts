@@ -8,6 +8,7 @@ import { AddMemberComponent } from 'src/app/add-new/components/add-member/add-me
 import { ChangePasswordComponent } from 'src/app/settings/components/change-password/change-password.component';
 import { JobComponentsComponent } from 'src/app/jobs/components/job-components/job-components.component';
 import { ListJobsComponent } from 'src/app/jobs/components/list-jobs/list-jobs.component';
+import { ApplicationsComponent } from 'src/app/application/component/applications/applications.component';
 
 const routes: Routes = [{
   path:'',component:AuthHomeComponent,
@@ -21,18 +22,6 @@ const routes: Routes = [{
     {
       path:'home',component:HomeComponent   
     },
-    {
-       path:'dashboard', component:DashboardHomeComponent
-    },
-    {
-       path:'addnew', component:AddMemberComponent
-    },
-    {
-      path:'settings', component:ChangePasswordComponent
-   },
-   {
-      path:'jobs',component:JobComponentsComponent
-   },
   ]
     }
   ]

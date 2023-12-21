@@ -19,7 +19,12 @@ const routes: Routes = [{
     {
       path:'jobs', loadChildren: () => import('../../../jobs/jobs.module').then(m => m.JobsModule)
     },
-   
+    {
+      path:'remove', loadChildren: () => import('../../../add-new/add-new.module').then(m => m.AddNewModule)
+    },
+    {
+      path:'applications', loadChildren: () => import('../../../application/application.module').then(m => m.ApplicationModule)
+    },
 
   ]
 }];
