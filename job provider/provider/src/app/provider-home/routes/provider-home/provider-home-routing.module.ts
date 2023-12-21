@@ -25,6 +25,13 @@ const routes: Routes = [{
     {
       path:'applications', loadChildren: () => import('../../../application/application.module').then(m => m.ApplicationModule)
     },
+    {
+      path:'interview', loadChildren: () => import('../../../interviews/interviews.module').then(m => m.InterviewsModule)
+    },
+    {
+      path:'message', loadChildren: () => import('../../../message/message.module').then(m => m.MessageModule)
+    },
+
 
   ]
 }];
