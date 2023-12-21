@@ -5,6 +5,8 @@ import { ChangePasswordComponent } from './components/change-password/change-pas
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 import { CompanyProfileComponent } from './components/company-profile/company-profile.component';
 import { SettingRoutingModule } from './routes/setting/setting-routing.module';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +19,9 @@ import { SettingRoutingModule } from './routes/setting/setting-routing.module';
   ],
   imports: [
     CommonModule,
-    SettingRoutingModule
+    SettingRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SettingsModule { }
