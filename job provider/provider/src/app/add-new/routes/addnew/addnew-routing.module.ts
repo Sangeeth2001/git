@@ -16,7 +16,20 @@ const routes: Routes = [
   },
   {
     path:'addnew/list',component:ListMemberComponent
-  }
+  },
+  {
+    path:'addnew/remove/remove/addnew',component:AddMemberComponent
+  },
+  {
+    path:'addnew/remove/remove/list',component:ListMemberComponent
+  },
+  {
+    path:'addnew/list/list/addnew',component:AddMemberComponent
+  },
+  {
+    path:'addnew/list/list/remove',component:RemoveMemberComponent
+  },
+
 ];
 
 @NgModule({

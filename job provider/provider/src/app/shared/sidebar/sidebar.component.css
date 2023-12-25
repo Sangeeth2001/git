@@ -1,10 +1,7 @@
 .sidebar-section{
     background-color:#20445c;
 }
-/* :hover{
-    background-color:#406ff3;
-    width: auto;
-   border-radius: 10px;
-} */
-
+li{
+    cursor: pointer;
+}
 
