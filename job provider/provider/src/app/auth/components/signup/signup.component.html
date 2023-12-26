@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 "  >
+            <div class="row"> 
+                    <div class="row w-50 d-block mx-auto mt-5" >
+                    <h3 class="text-center">Register Here</h3>
+                      <form [formGroup]="registerForm" (ngSubmit)="submit()">
+                        <label for="">Firstname:</label><br>
+                        <input type="text" placeholder="Enter firstname"  class=" form-control" formControlName="firstName" [ngClass]="{'is-invalid':submitted && registerForm.controls['firstName'].errors}">
+                        <label for="">Lastname:</label>
+                        <input type="text" placeholder="Enter lastName"  class="  form-control" formControlName="lastName" [ngClass]="{'is-invalid':submitted && registerForm.controls['lastName'].errors}">
+                        <label for="">Username:</label>
+                        <input type="text" placeholder="Enter Username"  class=" form-control" formControlName="userName" [ngClass]="{'is-invalid':submitted && registerForm.controls['userName'].errors}">
+                        <label for="">Email:</label>
+                        <input type="email" placeholder="Enter email"  class=" form-control" formControlName="email" email [ngClass]="{'is-invalid':submitted && registerForm.controls['email'].errors}">
+                        <label for="">Phone:</label>
+                        <input type="tel" placeholder="Enter Phone number"  class=" form-control" formControlName="phone" [ngClass]="{'is-invalid':submitted && registerForm.controls['phone'].errors}">
+                        <button class="submit" class="btn btn-info mt-1">Register</button>
+                        <p class="text-center  text-decoration-none">Already have an account? <a routerLink="/login"><b class="text-info">Sign in</b></a></p>
+                      </form>
+                     </div>
+              </div>
+         </div>
+     </div>
+</div>

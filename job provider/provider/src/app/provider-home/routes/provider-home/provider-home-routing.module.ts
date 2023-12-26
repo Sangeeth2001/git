@@ -6,8 +6,8 @@ import { DashboardComponent } from 'src/app/dashboard/components/dashboard/dashb
 const routes: Routes = [
   {
   path: 'home', component:HomeComponent,
-  children: [
   
+  children: [
     {
       path: 'dashboard', loadChildren: () => import('../../../dashboard/dashboard.module').then(m => m.DashboardModule)
     },

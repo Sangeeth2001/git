@@ -11,24 +11,20 @@ import { DashboardHomeComponent } from './dashboard/components/dashboard-home/da
 import { RouterModule, Routes } from '@angular/router';
 import { ProviderHomeModule } from './provider-home/provider-home.module';
 import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    // DashboardComponent,
-    // DashboardHomeComponent,
-    // SidebarComponent,
-      //  NavbarComponent,
-    // LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // ProviderHomeModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
     
     
   ],

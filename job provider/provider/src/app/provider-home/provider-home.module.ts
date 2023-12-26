@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProviderHomeRoutingModule } from './routes/provider-home/provider-home-routing.module';
+import { SignupComponent } from '../auth/components/signup/signup.component';
 
 
 
@@ -11,6 +12,7 @@ import { ProviderHomeRoutingModule } from './routes/provider-home/provider-home-
   declarations: [
     HomeComponent,
     // SidebarComponent
+   
   ],
   imports: [
     CommonModule,

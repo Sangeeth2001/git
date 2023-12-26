@@ -6,6 +6,9 @@ import { AuthRoutingModule } from './routes/auth/auth-routing.module';
 import { AuthHomeComponent } from './components/auth-home/auth-home.component';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from '../dashboard/components/dashboard/dashboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignupComponent } from './components/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -13,11 +16,14 @@ import { DashboardComponent } from '../dashboard/components/dashboard/dashboard.
   declarations: [
     LoginComponent,
     AuthHomeComponent,
-    // DashboardComponent
+    SignupComponent,
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class AuthModule { }
