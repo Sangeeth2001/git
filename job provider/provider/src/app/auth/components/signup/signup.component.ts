@@ -13,7 +13,7 @@ export class SignupComponent {
   submitted:boolean=false;
   signUpDetail!: signupDetails;
   
-  constructor(private fb:FormBuilder,service:AuthService){}
+  constructor(private fb:FormBuilder,private authService:AuthService){}
 
   ngOnInit(){
     this.registerForm=this.fb.group({
@@ -30,6 +30,10 @@ export class SignupComponent {
     this.submitted=true;
     this.signUpDetail=this.registerForm.value;
     console.log(this.signUpDetail);
+    this.authService.signUpData(this.signUpDetail).subscribe(response=>{
+      console.log(response);
+    })
     this.registerForm.reset();
+    
   }
 }

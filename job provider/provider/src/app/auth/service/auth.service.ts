@@ -15,6 +15,6 @@ export class AuthService {
   }
 
   signUpData(data:any){
-    return this.http.post<signupDetails>(environment.baseurl+'/signUpDetail',data)
+    return this.http.post<signupDetails>(environment.baseurl+'v1/job-provider/signup',data)
   }
 }

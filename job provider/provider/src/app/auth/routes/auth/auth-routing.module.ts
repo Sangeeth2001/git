@@ -4,6 +4,7 @@ import { AuthHomeComponent } from '../../components/auth-home/auth-home.componen
 import { LoginComponent } from '../../components/login/login.component';
 import { HomeComponent } from 'src/app/provider-home/components/home/home.component';
 import { SignupComponent } from '../../components/signup/signup.component';
+import { SetPasswordComponent } from '../../components/set-password/set-password.component';
 
 
 const routes: Routes = [{
@@ -20,6 +21,9 @@ const routes: Routes = [{
     },
     {
       path:'home',component:HomeComponent   
+    },
+    {
+      path:'set-password', component:SetPasswordComponent
     },
   ]
     }

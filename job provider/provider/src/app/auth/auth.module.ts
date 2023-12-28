@@ -9,6 +9,7 @@ import { DashboardComponent } from '../dashboard/components/dashboard/dashboard.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SetPasswordComponent } from './components/set-password/set-password.component';
 
 
 
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     AuthHomeComponent,
     SignupComponent,
+    SetPasswordComponent,
   ],
   imports: [
     CommonModule,
