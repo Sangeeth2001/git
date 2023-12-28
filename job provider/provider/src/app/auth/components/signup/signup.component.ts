@@ -21,7 +21,8 @@ export class SignupComponent {
       lastName:['',[Validators.required]],
       userName:['',[Validators.required]],
       email:['',[Validators.required]],
-      phone:['',[Validators.required]],
+      phone:['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+
 
     })
   }
