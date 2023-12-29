@@ -28,12 +28,30 @@ export class SignupComponent {
   }
   submit(){
     this.submitted=true;
+    this.registerForm.valid
     this.signUpDetail=this.registerForm.value;
     console.log(this.signUpDetail);
-    this.authService.signUpData(this.signUpDetail).subscribe(response=>{
+
+    this.authService.signUpData(this.signUpDetail).subscribe((response: any)=>{
       console.log(response);
-    })
+      
+      if(response.status == 200 && response.status<300){
+        alert("success")
+      }
+
+      // if(response.status===200 && response.status<300){
+      //   alert("success")
+      // }
+      // else{
+      //   alert('fail')
+      // }
+        },(error)=>{
+          alert("failed")
+        }
+        )
+      
     this.registerForm.reset();
+  
     
   }
 }

@@ -15,7 +15,7 @@
                         <input type="email" placeholder="Enter email"  class=" form-control" formControlName="email" email [ngClass]="{'is-invalid':submitted && registerForm.controls['email'].errors}">
                         <label for="">Phone:</label>
                         <input type="tel" placeholder="Enter Phone number"  class=" form-control" formControlName="phone" [ngClass]="{'is-invalid':submitted && registerForm.controls['phone'].errors}">
-                        <a routerLink="/set-password"><button class="submit" class="btn btn-info mt-1">Register</button></a>
+                        <a routerLink="/set-password"></a><button class="submit" class="btn btn-info mt-1">Register</button>
                         <p class="text-center  text-decoration-none">Already have an account? <a routerLink="/login"><b class="text-info">Sign in</b></a></p>
                       </form>
                      </div>
