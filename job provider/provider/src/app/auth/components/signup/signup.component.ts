@@ -35,7 +35,7 @@ export class SignupComponent {
     this.authService.signUpData(this.signUpDetail).subscribe((response: any)=>{
       console.log(response);
       
-      if(response.status == 200 && response.status<300){
+      if(response.status >= 200 && response.status<300){
         alert("success")
       }
 
@@ -45,12 +45,13 @@ export class SignupComponent {
       // else{
       //   alert('fail')
       // }
-        },(error)=>{
+        }
+        ,(error)=>{
           alert("failed")
         }
         )
       
-    this.registerForm.reset();
+    // this.registerForm.reset();
   
     
   }
