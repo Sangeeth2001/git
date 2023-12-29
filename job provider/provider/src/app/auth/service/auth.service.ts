@@ -21,4 +21,7 @@ export class AuthService {
   verifyEmail(signupId:string){
     return this.http.get<signupDetails>(environment.baseurl+'v1/job-provider/signup/'+signupId+'/verify-email')
   }
+  setPassword(password:string,signupId:string){
+    return this.http.post<signupDetails>(environment.baseurl+'v1/job-provider/signup/'+signupId+'/set-password',password)
+  }
 }

@@ -26,7 +26,18 @@ export class SetPasswordComponent {
           alert("failed");
         }
         )
-      })
-
+      });
     }
+
+
+  passwordSubmit(newPass:string,cPass:string) {
+
+    if (newPass===cPass) {
+      // console.log('correct Passwords');
+      alert('correct')
+    } else {
+      // console.log('Passwords do not match');
+      alert('do not match')
+    }
+  }
 }
