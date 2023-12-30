@@ -5,3 +5,6 @@ export class signupDetails{
     email!:string;
     phone!:string;
 }
+export class setPassword{
+    password!: string;
+}
