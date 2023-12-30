@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { setPassword, signupDetails } from '../model/signup';
+import { setPassword, signupDetails,setlogin } from '../model/signup';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/app/environment/environments';
 import { Observable } from 'rxjs';
@@ -25,5 +25,8 @@ export class AuthService {
     const headers = {'Content-Type': 'application/json'};
     const jsonString=JSON.stringify(password);
     return this.http.post(environment.baseurl+'v1/job-provider/signup/'+signupId+'/set-password/',jsonString, {headers});
+  }
+  verifyLogin(data:any){
+    return this.http.post<setlogin[]>(environment.baseurl+'v1/job-provider/login',data)
   }
 }

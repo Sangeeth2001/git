@@ -8,3 +8,7 @@ export class signupDetails{
 export class setPassword{
     password!: string;
 }
+export class setlogin{
+    email!: string;
+    password!: string;
+}
