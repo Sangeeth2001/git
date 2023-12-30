@@ -33,6 +33,16 @@ export class SetPasswordComponent {
   passwordSubmit(newPass:string,cPass:string) {
 
     if (newPass===cPass) {
+<<<<<<< HEAD
+      // console.log('correct Passwords');
+      alert('correct')
+    } else {
+      // console.log('Passwords do not match');
+      alert('do not match')
+    }
+
+    
+=======
 
       this.authservice.setPassword(newPass, this.signupId).subscribe((data:any)=> {
         alert(data)
@@ -50,5 +60,6 @@ export class SetPasswordComponent {
 
       
   
+>>>>>>> 5d2ca8bff58ae86b8ba1a1a519ebd1d7395c938f
   }
 
