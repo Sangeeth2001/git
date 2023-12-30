@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { signupDetails } from '../model/signup';
+import { setPassword, signupDetails } from '../model/signup';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/app/environment/environments';
 import { Observable } from 'rxjs';
@@ -22,6 +22,8 @@ export class AuthService {
     return this.http.get<signupDetails>(environment.baseurl+'v1/job-provider/signup/'+signupId+'/verify-email')
   }
   setPassword(password:string,signupId:string){
-    return this.http.post<signupDetails>(environment.baseurl+'v1/job-provider/signup/'+signupId+'/set-password',password)
+    const headers = {'Content-Type': 'application/json'};
+    const jsonString=JSON.stringify(password);
+    return this.http.post(environment.baseurl+'v1/job-provider/signup/'+signupId+'/set-password/',jsonString, {headers});
   }
 }
