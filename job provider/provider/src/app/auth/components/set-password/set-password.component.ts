@@ -39,5 +39,7 @@ export class SetPasswordComponent {
       // console.log('Passwords do not match');
       alert('do not match')
     }
+
+    
   }
 }
