@@ -33,13 +33,22 @@ export class SetPasswordComponent {
   passwordSubmit(newPass:string,cPass:string) {
 
     if (newPass===cPass) {
-      // console.log('correct Passwords');
-      alert('correct')
-    } else {
-      // console.log('Passwords do not match');
-      alert('do not match')
-    }
 
-    
+      this.authservice.setPassword(newPass, this.signupId).subscribe((data:any)=> {
+        alert(data)
+        
+      });
+      this.router.navigate(['/login'])
+      // if(data.status == 200 && data.status >300){
+        alert("password set sucessfull")
+      }else{
+        alert("failed")
+      }
+     
+    } 
+
+
+      
+  
   }
-}
+
