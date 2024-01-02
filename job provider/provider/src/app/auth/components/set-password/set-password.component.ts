@@ -50,4 +50,9 @@ export class SetPasswordComponent {
 
       
   
+<<<<<<< HEAD
   }
+=======
+  }
+
+>>>>>>> d94e51f22d0f0fd520f72fdac001d5927673d4e3

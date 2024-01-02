@@ -17,6 +17,15 @@ export class LoginComponent {
   login(data:any){
     this.authService.verifyLogin(data).subscribe((response: any)=>{
       console.log(response);
+      const token= localStorage.setItem('accessToken',response.token)
+      if (response.token){
+        alert("login successfully")
+      }
+  },
+  (error)=>{
+    alert("error")
   }
- )}
+ )
+ 
+}
 }
