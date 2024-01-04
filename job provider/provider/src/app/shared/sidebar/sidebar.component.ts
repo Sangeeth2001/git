@@ -32,4 +32,7 @@ export class SidebarComponent {
   navigatetoapplication(){
     this.router.navigate(['home/applications']);
   }
+  navigatetocompany(){
+    this.router.navigate(['home/company']);
+  }
 }
