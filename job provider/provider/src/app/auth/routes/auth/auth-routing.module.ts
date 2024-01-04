@@ -7,11 +7,13 @@ import { SignupComponent } from '../../components/signup/signup.component';
 import { SetPasswordComponent } from '../../components/set-password/set-password.component';
 
 
-const routes: Routes = [{
+const routes: Routes = [
+ 
+  {
   path:'',component:AuthHomeComponent,
   children:[
     {
-      path: '', component:SignupComponent
+      path: 'signup', component:SignupComponent
     },
     // {
     //   path:'signup',component:SignupComponent
