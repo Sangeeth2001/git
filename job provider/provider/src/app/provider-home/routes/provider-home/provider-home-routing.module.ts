@@ -32,6 +32,10 @@ const routes: Routes = [
     {
       path:'message', loadChildren: () => import('../../../message/message.module').then(m => m.MessageModule)
     },
+    {
+      path:'company', loadChildren: () => import('../../../company/company.module').then(m => m.CompanyModule)
+    }
+    
   ]
 }
 ];

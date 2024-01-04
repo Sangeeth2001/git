@@ -9,6 +9,7 @@ export class setPassword{
     password!: string;
 }
 export class setlogin{
+    id!:string;
     email!: string;
     password!: string;
 }

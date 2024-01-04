@@ -13,6 +13,9 @@ export class AuthService {
   getToken(): any {
     return localStorage.getItem('accessToken') // Return an empty string if the token is null or undefined
   }
+  getid(): any {
+    return sessionStorage.getItem('accessid') // Return an empty string if the token is null or undefined
+  }
 
   signUpData(data:any){
     return this.http.post<signupDetails>(environment.baseurl+'v1/job-provider/signup',data)
