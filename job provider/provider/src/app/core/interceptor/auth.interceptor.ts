@@ -17,17 +17,16 @@ export class AuthInterceptor implements HttpInterceptor {
 
     const token = this.authservice.getToken();
 
-    const id = sessionStorage.getItem('accessid');
-    const company_id = sessionStorage.getItem('c_id');
+    const jobProvderId = sessionStorage.getItem('accessToken');
+    const jobProviderId = sessionStorage.getItem('id')
+    // const company_id = sessionStorage.getItem('c_id');
     // const role = localStorage.getItem('role');
 
       request = request.clone({
         setHeaders: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-          'accessid': id ? id : '', // Add user ID to the headers (if available)
-          // role: role
-          'c_id':company_id ? company_id :'',
+           'Authorization': `Bearer ${jobProvderId}` 
+
         }
       });
 
