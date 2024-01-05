@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/app/environment/environments';
-import { addcmpnyDetails } from '../model/addcmpny';
+import { addIndustry, addLocation, addcmpnyDetails } from '../model/addcmpny';
 
 @Injectable({
   providedIn: 'root'
@@ -9,13 +9,22 @@ import { addcmpnyDetails } from '../model/addcmpny';
 export class CmpnyserviceService {
 
   constructor(private http:HttpClient) { }
-  getid(): any {
-    return sessionStorage.getItem('c_id') // Return an empty string if the token is null or undefined
+  getId(): any {
+    return sessionStorage.getItem('id') // Return an empty string if the token is null or undefined
   }
 
   
   verifycmpny(data:any){
-    return this.http.post<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/5726fdd7-4657-490d-5c11-08dc0cdf5ce7/company',data)
+    const jobProviderId=this.getId();
+    return this.http.post<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/'+jobProviderId+'/company',data)
+  }
+
+  getLocation(){
+    return this.http.get<addLocation[]>(environment.baseurl+'v1/GetLocations')
+  }
+
+  getIndustry(){
+    return this.http.get<addIndustry[]>(environment.baseurl+'v1/GetIndustries')
   }
 
 }
