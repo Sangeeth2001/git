@@ -2,9 +2,10 @@
     <div class="row">
         <div class="col-md-12 "  >
             <div class="row"> 
-                    <div class="row w-50 d-block mx-auto mt-5" >
+              <a class="text-decoration-none" [routerLink]="['companylist']"><h5>company list</h5></a>
+                    <div class="row w-50 d-block mx-auto mt-4" >
                     <h3 class="text-center">Register Your Company Here</h3>
-                      <form [formGroup]="cmpnyregisterForm">
+                      <form [formGroup]="cmpnyregisterForm" (ngSubmit)="submitt()">
                         <label for="">LegalName:</label><br>
                         <input type="text" placeholder="Enter legalName"  class=" form-control" formControlName="legalName" [ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['firstName'].errors}">
                         <label for="">Summary:</label>
@@ -31,7 +32,7 @@
                           </option>
                         </select>
                         <div class="d-flex justify-content-center">
-                          <button type="submit" class="btn  btn-info mt-3 mb-3 " (click)="submitt()">Register</button>
+                          <button type="submit" class="btn  btn-info mt-3 mb-3">Register</button>
                         </div>
                       </form>
                      </div>
