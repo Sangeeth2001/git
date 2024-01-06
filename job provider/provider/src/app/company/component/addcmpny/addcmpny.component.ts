@@ -36,7 +36,7 @@ export class AddcmpnyComponent {
     const data= this.cmpnyregisterForm.value
     this.Cservice.verifycmpny(data).subscribe((response:any)=>{
       console.log(response.id);
-      const addCmpnyDetails=sessionStorage.setItem('accessid',response.id)
+      const addCmpnyDetails=sessionStorage.setItem('c_id',response.id)
     }
     
   );

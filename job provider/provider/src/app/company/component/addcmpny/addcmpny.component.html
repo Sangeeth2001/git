@@ -26,12 +26,13 @@
                         <input type="text" placeholder="Enter website"  class=" form-control" formControlName="website" [ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['website'].errors}">
                         <label for="">Location:</label><br>
                         <select name="location" class="form-control" id="" formControlName="location">
-                          <option >----select----</option>
                           <option  [value]="loc.id" *ngFor="let loc of addLocation">
                             {{loc.name}}
                           </option>
                         </select>
-                        <button class="submit" class="btn btn-info mt-1" (click)="submitt()">Register</button>
+                        <div class="d-flex justify-content-center">
+                          <button type="submit" class="btn  btn-info mt-3 mb-3 " (click)="submitt()">Register</button>
+                        </div>
                       </form>
                      </div>
               </div>
