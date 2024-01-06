@@ -17,8 +17,8 @@ export class AuthInterceptor implements HttpInterceptor {
 
     const token = this.authservice.getToken();
 
-    const jobProvderId = sessionStorage.getItem('accessToken');
-    const jobProviderId = sessionStorage.getItem('id')
+    const jobProvderId = localStorage.getItem('accessToken');
+    // const jobProviderId = sessionStorage.getItem('id')
     // const company_id = sessionStorage.getItem('c_id');
     // const role = localStorage.getItem('role');
 

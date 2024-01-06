@@ -10,7 +10,7 @@ export class CmpnyserviceService {
 
   constructor(private http:HttpClient) { }
   getId(): any {
-    return sessionStorage.getItem('id') // Return an empty string if the token is null or undefined
+    return sessionStorage.getItem('accessid') // Return an empty string if the token is null or undefined
   }
 
   
