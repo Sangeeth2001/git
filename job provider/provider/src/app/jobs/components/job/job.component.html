@@ -1,6 +1,13 @@
-<div class="row">
-    <div class="col-md-2">
+ <!-- <div class="row flex-nowrap">
+    <div class="col-md-3">
         <h6>Find Jobs</h6>
+    </div>
+    <div class="col-md-2">
+         <a routerLink="/postjob"></a>
+        <h6 style="color: black;">Post Job</h6>
+    </div>
+    <div class="col-md-2">
+        <a href=""><h6 style="color: black;">Update</h6></a>
     </div>
 </div>
 <div class="row">
@@ -115,5 +122,95 @@
     <div class="col-md-5">
         <img src="./image/professional1.png"  height="585px" width="300px" alt="">
     </div>
-</div>
+</div> -->
 
+
+
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+
+        <div class="col py-4">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </nav>
+
+                    <div class="formdiv py-4 ml-5 pl-5 shadow">
+                        <h4>Post Job</h4>
+                        <hr class="line2" width="85%">
+
+                        <form  (ngSubmit)="postData()">
+                            <div class="form-group">
+                                <label  class="form-label"><b>Job Title</b></label>
+                                <input type="text"  placeholder="Please Enter job title" class="form-control bg-light shadow-sm border-0 w-75" formControlName="jobTitle" required>
+                            </div>
+                            <div class="form-group">
+                                <label  class="form-label"><b>Job Summary</b></label>
+                                <input type="text"  placeholder="Please Enter job summary" class="form-control bg-light shadow-sm border-0 w-75" formControlName="jobSummary" required>
+                            </div>
+ 
+                                <label ><b>location</b></label>
+                                <select name="locationId" id="" class="form-control w-75" formControlName="locationId">
+                                <option >select</option>
+                                <option [value]="list.id" *ngFor="let list for jobslist">
+                                    {{list.name}}
+                                </option>
+                                </select>
+                           
+                            <div class="form-group">
+                                <label  class="form-label"><b>companyId</b></label>
+                                <select  class="form-control w-75">
+                                <input type="text"  placeholder="Please enter post date" class="form-control bg-light shadow-sm border-0 w-75" formControlName="companyId" required>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label  class="form-label"><b>categoryId</b></label>
+                                <select name="" id="" class="form-control w-75">
+                                <input type="text"  placeholder="Please enter post date" class="form-control bg-light shadow-sm border-0 w-75" formControlName="categoryId" required>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label  class="form-label"><b>industryId</b></label>
+                                <select name="" id="" class="form-control w-75">
+                                <input type="text"  placeholder="Please enter post date" class="form-control bg-light shadow-sm border-0 w-75" formControlName="industryId" required>
+                                </select>
+                            </div>
+
+                            
+                            <div class="lastdiv d-flex  align-items-center">
+                                <div class="mb-3 pl-5 d-md-block">
+                                    <button class="btn btn-primary" [disabled]="postjobs.invalid">Post Job</button>
+                                </div>
+                                <div class="mb-3 pl-5 d-md-block d-none d-sm-inline">
+                                    <a class="text-decoration-none text-dark" href="#">Push Notification</a>
+                                    <img src="images/Group 14.png" alt="">
+                                </div>
+                                <div class="mb-3 pl-5 d-md-block d-none d-sm-inline d-md-inline">
+                                    <a class="text-decoration-none text-dark" href="#">Email Notification</a>
+                                    <img src="images/Group 14.png" alt="">
+                                </div>
+                            </div>
+                            
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+<div *ngFor="let list of jobslist">
+    <li>{{list.name}}</li>
+
+</div>
