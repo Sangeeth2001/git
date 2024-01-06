@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { addLocation, addcmpnyDetails } from '../../model/addcmpny';
+import { addIndustry, addLocation, addcmpnyDetails } from '../../model/addcmpny';
 import { CmpnyserviceService } from '../../service/cmpnyservice.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class AddcmpnyComponent {
   submitted:boolean=false;
   addCmpnyDetails!:addcmpnyDetails;
   addLocation!:addLocation[];
-  addIndustry!:addLocation[];
+  addIndustry!:addIndustry[];
 
   constructor(private Cservice:CmpnyserviceService, private fb:FormBuilder){}
 
@@ -35,14 +35,12 @@ export class AddcmpnyComponent {
   submitt(){
     const data= this.cmpnyregisterForm.value
     this.Cservice.verifycmpny(data).subscribe((response:any)=>{
-      console.log(response);
-      
-      const company_id= sessionStorage.setItem('id',response.c_id)
-      // console.log(provider_id)
-      console.log(company_id);
+      console.log(response.id);
+      const addCmpnyDetails=sessionStorage.setItem('accessid',response.id)
     }
-  )
-  this.cmpnyregisterForm.reset();
+    
+  );
+   this.cmpnyregisterForm.reset();
 }
 getLocation(){
   this.Cservice.getLocation().subscribe((data:any)=>{
