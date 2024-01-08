@@ -1,19 +1,15 @@
-<!-- component working!!!!! -->
 <div class="container-fluid">
     <div class="row">
-        <div>
-            <div class="card pt-2 pl-3 pr-3">
+        <div class="col-md-8">
+            <div class="card pt-2 pl-3 pr-3 custom-card">
                 <ng-container *ngFor="let list of company">
-                    <p>Company Name: {{list.legalName}}</p>
-                    <p>Summary: {{list.summary}}</p>
-                    <p>Industry: {{list.industryId}}</p>
-                    <p>Email: {{list.email}}</p>
-                    <p>Address: {{list.address}}</p>
-                    <p>Website: {{list.website}}</p>
-                    <p>Location: {{list.location}}</p>
+                    <p class="name">{{list.legalName}}</p>
+                    <p class="summary">{{list.summary}}</p>
+                    <p class="email">{{list.email}}</p>
+                    <p class="address">{{list.address}}</p>
+                    <p class="website"><a href="#">{{list.website}}</a></p>
                 </ng-container>
-            </div>
-            
+            </div>  
         </div>
     </div>
 </div>

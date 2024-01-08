@@ -11,7 +11,8 @@ const routes: Routes = [
   },
   {
     path:'companylist',component:ListCompanyComponent
-  }
+  },
+  
 ];
 
 @NgModule({
