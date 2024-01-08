@@ -18,6 +18,13 @@ export class CompanymemberService {
     const companyId=this.getCompanyId()
     return this.http.post<addMember[]>(environment.baseurl+'Company/job-provider/company/'+companyId+'/addcompanymember',data)
   }
+  listCompanyMember(){
+    const companyId=this.getCompanyId()
+    return this.http.get<addMember[]>(environment.baseurl+'Company/job-provider/company/'+companyId+'/listcompanymember')
+  }
+  removeMember(id:string){
+    return this.http.delete<addMember[]>(environment.baseurl+'Company/job-provider/company/'+id+'/RemoveCompanyMember')
+  }
 
 
 }
