@@ -1,77 +1,16 @@
-<div class="col-md-10 pt-2">
-    <p class="fw-bold fs-4 my-2">Find company Member
-      <span class="float-end ">
-        <img src="" style="width: 30px; height: 30px;">
-        <img src="images/logout (3).png" style="width: 30px; height: 30px;">
-      </span>  
-    </p>
-    <div class="row">
-      <form class="form-inline col-md-8">
-        <input type="text"  placeholder="search by Name ,Member ID, Designation" class="form-control w-100 border border-dark rounded-pill  h-55">
-        </form>
-        <hr>
-    </div>
-    <div class="row mt-3">
-      <div class="col-md-6 mx-auto text-center">
-        <a class="text-decoration-none text-dark" [routerLink]="['list/addnew']">
-          <h5>Add member</h5>
-        </a>
+ <div class="row">
+    <ng-container *ngFor="let list of addMember">
+      <div class="card ml-3 mt-3 pt-2 pl-3 pr-3">
+        <p>{{list.firstName}}</p>
+        <p>{{list.lastName}}</p>
+        <p>{{list.userName}}</p>
+        <p>{{list.email}}</p>
+        <p>{{list.phone}}</p>
+        <p>{{list.password}}</p>
+        <span>
+          <button class="delete btn btn-danger" (click)="removeCompanyMember(list.id)">Delete</button>
+        </span>
+        
       </div>
-      <div class="col-md-6   mb-2">
-        <a class="text-decoration-none text-dark" [routerLink]="['list/remove']">
-          <h5>Remove member</h5>
-        </a>
-      
-      </div>
-   </div>
-
-   <div class=" container-fluid mt-3 shadow border pt-4 px-3 my-md-3">
-      <div class="row ">
-        <div class="col-md-6 col-sm-12 text-center  "><img src="..//..//./../../assets/images/cheerfulboy.png"alt="jobseekerimage">
-        <p class="fw-bold">User ID <br>
-        Manu <br>
-        Java Developer <br>
-      9876543210 <br>
-      manu@gmail.com
-  </p>
-      <p class="text-sm-center">
-        <button class="btn btn-primary btn-sm  rounded-pill">view</button>
-        </p>   
-        </div>
-
-        <div class="col-md-6 col-sm-12 text-center text-sm-start"><img src="..//..//./../../assets/images/cutegirl.png" alt="jobseekerimage">
-          <p class="fw-bold"> User ID <br>
-              Lamiya <br>
-              H.R Manager <br>
-              9231457680 <br>
-              lamiya@gmail.com</p>
-          <p class="text-sm-center">
-          <button class="btn btn-primary btn-sm  rounded-pill">view</button>
-          </p>
-        </div>
-
-        <div class="col-md-6 col-sm-12 text-center text-sm-start"><img src="..//..//./../../assets/images/cheerfulboy.png" alt="jobseekerimage">
-          <p class="fw-bold">User ID <br>
-              Alexander <br>
-              Marketing Executive <br>     
-              7865043218 <br>         
-              alexander@gmail.com</p>  
-          <p class="text-sm-center">
-            <button class="btn btn-primary btn-sm  rounded-pill">view</button>
-          </p>             
-        </div>
-
-        <div class="col-md-6 col-sm-12 text-center text-sm-start"><img src="..//..//./../../assets/images/cutegirl.png" alt="jobseekerimage">
-          <p class="fw-bold">User ID <br>
-
-              Catherine <br>
-              System Analyst <br>
-              8087236956 <br>
-              catherin@gmail.com</p>
-            <p class="text-sm-center">
-                <button class="btn btn-primary btn-sm  rounded-pill">view</button>
-            </p>     
-        </div>
-      </div>
-    </div>
- </div>   
+    </ng-container>
+ </div>

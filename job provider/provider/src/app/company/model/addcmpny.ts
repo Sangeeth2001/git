@@ -8,6 +8,9 @@ export class addcmpnyDetails{
     address!:string;
     website!:string;
     location!:string;
+    industry!:string;
+    companyUsers!:string;
+    locationNavigation!:string;
 }
 export class addLocation{
     id!:string;
