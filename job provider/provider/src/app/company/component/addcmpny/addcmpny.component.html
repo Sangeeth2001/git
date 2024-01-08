@@ -12,7 +12,6 @@
                         <input type="text" placeholder="Enter summary"  class="  form-control" formControlName="summary" [ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['lastName'].errors}">
                         <label for="">Industry:</label><br>
                         <select name="industryId" class="form-control" formControlName="industryId" id="">
-                          <option >----select----</option>
                           <option [value]="industry.id" *ngFor="let industry of addIndustry">
                             {{industry.name}}
                           </option>
@@ -32,7 +31,7 @@
                           </option>
                         </select>
                         <div class="d-flex justify-content-center">
-                          <button type="submit" class="btn  btn-info mt-3 mb-3">Register</button>
+                          <a class="text-decoration-none" [routerLink]="['companylist']"><button type="submit" class="btn  btn-info mt-3 mb-3">Register</button></a>
                         </div>
                       </form>
                      </div>

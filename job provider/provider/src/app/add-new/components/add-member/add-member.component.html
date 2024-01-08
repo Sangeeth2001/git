@@ -1,55 +1,52 @@
 <div class="row">
-  <div class=" col d-flex justify-content-end">
+  <div class=" col d-flex justify-content-end pl-1">
       <a class="text-decoration-none text-dark" [routerLink]="['addnew/remove']">
         <h5>Remove member</h5>
       </a>
   </div>
-  <div class="list col">
+  <div class="col">
     <a class="text-dark text-decoration-none" [routerLink]="['addnew/list']">
       <h5>List of member</h5>
     </a>
   </div>
 </div>
   <div class="row">
-    <div class="col-md-10 border  pt-3 card shadow rounded-5 mx-3 ">
-      <h5 class="text-center pt-3">Registration of new member</h5>
-      <form action="">
+    <div class="col-md-10 border pt-3 card shadow rounded-5 mx-3 custom-form">
+      <h5 class="form-title d-none d-sm-inline">Registration of new member</h5>
+      <form action="" [formGroup]="registerMember" (ngSubmit)="addCompany()">
         <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-5 ">
-              <label for="">First Name</label><br>
-              <input type="text" placeholder="Enter firstname" style="height: 40px;">
+          <div class="col-md-6">
+            <label class="form-label" for="firstName">First Name</label>
+            <input type="text" placeholder="Enter firstname" class="form-control" formControlName="firstName">
           </div>
-          <div class="col-md-5 ">
-              <label  for="">Last Name</label><br>
-              <input type="text" placeholder="Enter lastname" style="height: 40px;">
-          </div>
-        </div>     
-        <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-5 ">
-              <label for="">Email</label><br>
-              <input type="text" placeholder="Enter email" style="height: 40px;">
-          </div>
-          <div class="col-md-5 ">
-              <label  for="">User Name</label><br>
-              <input type="text" placeholder="Enter user name" style="height: 40px;">
-          </div>
-        </div>     
-        <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-5 ">
-              <label for="">Phone Number</label><br>
-              <input type="text" placeholder="Enter phone number" style="height: 40px;">
-          </div>
-          <div class="col-md-5 ">
-              <label  for="">Password</label><br>
-              <input type="text" placeholder="Enter  password" style="height: 40px;">
+          <div class="col-md-6">
+            <label class="form-label" for="lastName">Last Name</label>
+            <input type="text" placeholder="Enter lastname" class="form-control" formControlName="lastName">
           </div>
         </div>
-        <div class="col d-flex justify-content-center pt-3 mb-3 ">
-          <button type="button" class="btn btn-secondary">Register</button>
-        </div>     
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label" for="userName">User Name</label>
+            <input type="text" placeholder="Enter user name" class="form-control" formControlName="userName">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="email">Email</label>
+            <input type="text" placeholder="Enter email" class="form-control" formControlName="email">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input type="text" placeholder="Enter phone number" class="form-control" formControlName="phone">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="password">Password</label>
+            <input type="text" placeholder="Enter password" class="form-control" formControlName="password">
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center pt-3 mb-3">
+          <button type="submit" class="btn btn-secondary form-button">Register</button>
+        </div>
       </form>
-     </div>
-  </div>     
+    </div>
+  </div>

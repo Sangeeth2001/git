@@ -4,6 +4,8 @@ import { AddMemberComponent } from './components/add-member/add-member.component
 import { RemoveMemberComponent } from './components/remove-member/remove-member.component';
 import { ListMemberComponent } from './components/list-member/list-member.component';
 import { AddnewRoutingModule } from './routes/addnew/addnew-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,7 +17,9 @@ import { AddnewRoutingModule } from './routes/addnew/addnew-routing.module';
   ],
   imports: [
     CommonModule,
-    AddnewRoutingModule
+    AddnewRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class AddNewModule { }
