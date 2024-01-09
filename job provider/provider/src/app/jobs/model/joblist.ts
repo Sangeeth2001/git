@@ -2,7 +2,7 @@ export class joblist{
     jobTitle!:string;
     jobSummary!:string;
     locationId!:string;
-    companyId!:string;
+    companyId!:any;
     categoryId!:string;
     industryId!:string;
     postedBy!:any|undefined;

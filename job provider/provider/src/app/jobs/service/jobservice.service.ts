@@ -34,6 +34,12 @@ export class JobserviceService {
     return sessionStorage.getItem('c_id')
   }
 
+  getJobList(){
+    const jobProvderId=this.getproviderIds();
+    const CompanyIds=this.getCompanyIds();
+    return this.http.get<joblist[]>(environment.baseurl+'v1/company/'+CompanyIds+'/job-provider/'+jobProvderId+'/job')
+  }
+
 
   postIds(data:any){
     const jobProvderId=this.getproviderIds();
@@ -41,11 +47,7 @@ export class JobserviceService {
     return this.http.post<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/job-provider/'+jobProvderId+'/job',data)
   }
 
-  getJobList(){
-    const jobProvderId=this.getproviderIds();
-    const CompanyIds=this.getCompanyIds();
-    return this.http.get<joblist[]>(environment.baseurl+'v1/company/'+CompanyIds+'/job-provider/'+jobProvderId+'/job')
-  }
+  
   
 }
 
