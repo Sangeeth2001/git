@@ -1,10 +1,10 @@
- <!-- <div class="row flex-nowrap">
+ <div class="row flex-nowrap">
     <div class="col-md-3">
         <h6>Find Jobs</h6>
     </div>
     <div class="col-md-2">
-         <a routerLink="/postjob"></a>
-        <h6 style="color: black;">Post Job</h6>
+         
+         <a routerLink="./postjob"><h6 style="color: black;">Post job</h6></a>
     </div>
     <div class="col-md-2">
         <a href=""><h6 style="color: black;">Update</h6></a>
@@ -122,12 +122,9 @@
     <div class="col-md-5">
         <img src="./image/professional1.png"  height="585px" width="300px" alt="">
     </div>
-</div> -->
+</div>
 
-
-
-
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row flex-nowrap">
 
         <div class="col py-4">
@@ -145,7 +142,7 @@
                         <h4>Post Job</h4>
                         <hr class="line2" width="85%">
 
-                        <form  (ngSubmit)="postData()">
+                        <form [formGroup]="postJobs" (ngSubmit)="post()">
                             <div class="form-group">
                                 <label  class="form-label"><b>Job Title</b></label>
                                 <input type="text"  placeholder="Please Enter job title" class="form-control bg-light shadow-sm border-0 w-75" formControlName="jobTitle" required>
@@ -155,45 +152,37 @@
                                 <input type="text"  placeholder="Please Enter job summary" class="form-control bg-light shadow-sm border-0 w-75" formControlName="jobSummary" required>
                             </div>
  
-                                <label ><b>location</b></label>
-                                <select name="locationId" id="" class="form-control w-75" formControlName="locationId">
-                                <option >select</option>
-                                <option [value]="list.id" *ngFor="let list for jobslist">
-                                    {{list.name}}
-                                </option>
-                                </select>
+                            <label for="">Location:</label><br>
+                            <select name="locationId" class="form-control w-75"  formControlName="locationId">
+                              <option  [value]="loc.id" *ngFor="let loc of jobslist">
+                                {{loc.name}}
+                              </option>
+                            </select>
                            
-                            <div class="form-group">
-                                <label  class="form-label"><b>companyId</b></label>
-                                <select  class="form-control w-75">
-                                <input type="text"  placeholder="Please enter post date" class="form-control bg-light shadow-sm border-0 w-75" formControlName="companyId" required>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label  class="form-label"><b>categoryId</b></label>
-                                <select name="" id="" class="form-control w-75">
-                                <input type="text"  placeholder="Please enter post date" class="form-control bg-light shadow-sm border-0 w-75" formControlName="categoryId" required>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label  class="form-label"><b>industryId</b></label>
-                                <select name="" id="" class="form-control w-75">
-                                <input type="text"  placeholder="Please enter post date" class="form-control bg-light shadow-sm border-0 w-75" formControlName="industryId" required>
-                                </select>
-                            </div>
+                            <label for="">company:</label><br>
+                            <select name="companyId" class="form-control w-75"  formControlName="companyId">
+                              <option  [value]="loc.id" *ngFor="let loc of addCompany">
+                                {{loc.legalName}}
+                              </option>
+                            </select>
 
+                            <label for="">category:</label><br>
+                            <select name="categoryId" class="form-control w-75"  formControlName="categoryId">
+                              <option  [value]="loc.id" *ngFor="let loc of addCategory">
+                                {{loc.name}}
+                              </option>
+                            </select>
+
+                            <label for="">industry:</label><br>
+                            <select name="industryId" class="form-control w-75"  formControlName="industryId">
+                              <option  [value]="loc.id" *ngFor="let loc of addIndustry">
+                                {{loc.name}}
+                              </option>
+                            </select>
                             
                             <div class="lastdiv d-flex  align-items-center">
                                 <div class="mb-3 pl-5 d-md-block">
-                                    <button class="btn btn-primary" [disabled]="postjobs.invalid">Post Job</button>
-                                </div>
-                                <div class="mb-3 pl-5 d-md-block d-none d-sm-inline">
-                                    <a class="text-decoration-none text-dark" href="#">Push Notification</a>
-                                    <img src="images/Group 14.png" alt="">
-                                </div>
-                                <div class="mb-3 pl-5 d-md-block d-none d-sm-inline d-md-inline">
-                                    <a class="text-decoration-none text-dark" href="#">Email Notification</a>
-                                    <img src="images/Group 14.png" alt="">
+                                    <button class="btn btn-primary mt-1">Post Job</button>
                                 </div>
                             </div>
                             
@@ -209,8 +198,8 @@
 
 
     </div>
-</div>
-<div *ngFor="let list of jobslist">
+</div> -->
+<!-- <div *ngFor="let list of jobslist">
     <li>{{list.name}}</li>
 
-</div>
+</div> -->
