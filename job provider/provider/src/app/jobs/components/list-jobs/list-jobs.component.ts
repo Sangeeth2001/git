@@ -19,6 +19,9 @@ export class ListJobsComponent {
   jobList(){
     this.jobservice.getJobList().subscribe((data:any) => {
       this.joblisting=data;
+      console.log(data);
+      console.log(this.joblisting);
+      
     });
   }
 }
