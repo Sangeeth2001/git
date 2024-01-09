@@ -1,1 +1,14 @@
-<p>list-jobs works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card pt-2 pl-3  custom-card">
+                <ng-container *ngFor="let list of joblisting">
+                    <p class="jobTitle">{{list.jobTitle}}</p>
+                    <p class="jobSummary">{{list.jobSummary}}</p>
+                    <p class="locationId">{{list.locationId}}</p>
+                    <p class="companyId">{{list.companyId}}</p>
+                </ng-container>
+            </div>  
+        </div>
+    </div>
+</div>
