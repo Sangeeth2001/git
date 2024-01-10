@@ -14,7 +14,7 @@ export class ListMemberComponent {
   constructor(private service:CompanymemberService){}
 
   ngOnInit(){
-    this.removeCompanyMember('id')
+    this.listMember();
   }
 
   listMember(){
@@ -22,9 +22,9 @@ export class ListMemberComponent {
       this.addMember=data;
     })
   }
-  removeCompanyMember(id:string){
+  removeCompanyMember(id:any){
     this.service.removeMember(id).subscribe((data:any)=>{
-      // this.addMember=data
+      console.log(data);
     });
     this.listMember();
   }
