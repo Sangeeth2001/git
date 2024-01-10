@@ -24,7 +24,6 @@ export class AuthInterceptor implements HttpInterceptor {
         setHeaders: {
           'Content-Type': 'application/json',
            'Authorization': `Bearer ${jobProvderId}` 
-
         }
       });
 

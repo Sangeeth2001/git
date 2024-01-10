@@ -12,6 +12,9 @@ export class CmpnyserviceService {
   getId(): any {
     return sessionStorage.getItem('accessid') // Return an empty string if the token is null or undefined
   }
+  getCompanyId():any{
+    return sessionStorage.getItem('c_id')
+  }
 
   
   verifycmpny(data:any){
@@ -27,9 +30,13 @@ export class CmpnyserviceService {
     return this.http.get<addIndustry[]>(environment.baseurl+'v1/GetIndustries')
   }
 
+  // getCompanyList(){
+  //   const companyId=this.getCompanyId();
+  //   return this.http.get<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/company/'+companyId)
+  // }
   getCompanyList(){
-    const jobProvderId=this.getId();
-    return this.http.get<addcmpnyDetails[]>(environment.baseurl+'v1/job-provider/'+jobProvderId+'/getCompany')
+    const companyId=this.getCompanyId();
+    return this.http.get<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/company/'+companyId)
   }
 
 }

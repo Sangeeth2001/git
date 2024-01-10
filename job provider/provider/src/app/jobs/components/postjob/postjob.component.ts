@@ -12,7 +12,7 @@ import { JobserviceService } from '../../service/jobservice.service';
 export class PostjobComponent implements OnInit  {
 
   postJobs!:FormGroup
-  jobslist!: getinglocation[];
+  getlocation!: getinglocation[];
   addCompany!:getingcompany[];
   addCategory!:getingcategory[];
   addIndustry!:getingindustry[];
@@ -46,7 +46,7 @@ export class PostjobComponent implements OnInit  {
   
   getjobs(){
     this.jb.getLocation().subscribe((data:any)=>{
-      this.jobslist=data;
+      this.getlocation=data;
       console.log(joblist.name);
     })
   }
