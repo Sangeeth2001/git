@@ -20,6 +20,7 @@ export class ListCompanyComponent {
   companyList(){
     this.service.getCompanyList().subscribe((data:any)=>{
       this.company=data;
+      console.log(this.company);
     });
   }
 }
