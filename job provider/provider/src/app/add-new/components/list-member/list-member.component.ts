@@ -23,7 +23,8 @@ export class ListMemberComponent {
     })
   }
   removeCompanyMember(id:string){
-    this.service.removeMember(id).subscribe((data:any)=>{
+    this.service.removeMember(id).subscribe((data)=>{
+      console.log(data)
       // this.addMember=data
     });
     this.listMember();
