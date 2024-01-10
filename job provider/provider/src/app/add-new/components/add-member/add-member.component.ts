@@ -29,6 +29,7 @@ export class AddMemberComponent {
   addCompany(){
     const data= this.registerMember.value
     this.service.companyMember(data).subscribe((response:any)=>{
+      this.addMember=response;
     }
   );
    this.registerMember.reset();
