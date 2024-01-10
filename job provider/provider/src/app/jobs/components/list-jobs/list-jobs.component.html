@@ -1,15 +1,24 @@
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-8">
-            <div class="card pt-2 pl-3  custom-card w-50">
-                <ng-container *ngFor="let list of joblisting">
+            <ng-container *ngFor="let list of joblisting">
+                <div class="card pt-2 pl-3  custom-card w-50">
                     <p class="jobTitle">{{list.jobTitle}}</p>
                     <p class="jobSummary">{{list.jobSummary}}</p>
                     <p class="locationId">{{list.locationId}}</p>
                     <p class="postedDate">{{list.postedDate}}</p>
-                </ng-container>
-            </div>  
+
+                    <span>
+                        <button class="delete btn btn-danger" (click)="removejob(list.id)">Delete</button>
+                        <button class="delete btn btn-primary ml-5">Update</button>
+                    </span>
+                </div>
+            </ng-container>
         </div>
     </div>
 </div>
+
+
+
 
