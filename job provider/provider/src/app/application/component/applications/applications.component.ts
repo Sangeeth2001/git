@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApplicationService } from '../../service/application.service';
 
 
 @Component({
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
 })
 export class ApplicationsComponent {
 
-  
+  constructor(private service:ApplicationService){}
+  getId(){
+    this.service.getApplication().subscribe((applicantsdata:any)=>{
+      this.getId=applicantsdata
+    })
+  }
 }

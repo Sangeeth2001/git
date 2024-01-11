@@ -1,3 +1,41 @@
 .logout{
     cursor: pointer;
 }
+
+/* Add these styles to your CSS file or inside a <style> tag in your HTML */
+
+/* Navbar background and link styles */
+.navbar {
+    background-color: #ffffff; /* Set your desired background color */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #333333; /* Set link color */
+    margin-right: 15px; /* Adjust spacing between links */
+    font-size: 18px; /* Set font size */
+  }
+  
+  /* Adjustments for the toggler icon */
+  .navbar-toggler {
+    border: none; /* Remove border */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #333333; /* Set icon color */
+  }
+  
+  /* Hover effect for links */
+  .navbar-nav .nav-link:hover {
+    color: #555555; /* Change color on hover */
+  }
+  
+  /* Style for the logout icon */
+  .logout {
+    cursor: pointer; /* Show pointer cursor */
+  }
+  
+  /* Style for the logout icon on hover */
+  .logout:hover {
+    color: red; /* Change color on hover */
+  }
+  
