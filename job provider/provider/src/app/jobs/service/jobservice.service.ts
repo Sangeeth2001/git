@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { getingcategory, getingcompany, getingindustry, getinglocation, joblist } from '../model/joblist';
+import { getingcategory, getingcompany, getingindustry, getinglocation, joblist, } from '../model/joblist';
 import { environment } from 'src/app/environment/environments';
 
 @Injectable({
@@ -46,6 +46,14 @@ export class JobserviceService {
     const CompanyId=this.getCompanyIds();
     return this.http.post<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/job-provider/'+jobProvderId+'/job',data)
   }
+
+  removejob(id:string){
+    const jobProvderId=this.getproviderIds();
+    const CompanyId=this.getCompanyIds();
+    return this.http.delete<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/job-provider/'+jobProvderId+'/job/'+id)
+  }
+
+
 
   
   

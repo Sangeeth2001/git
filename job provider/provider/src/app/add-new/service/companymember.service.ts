@@ -22,7 +22,7 @@ export class CompanymemberService {
     const companyId=this.getCompanyId()
     return this.http.get<addMember[]>(environment.baseurl+'Company/job-provider/company/'+companyId+'/listcompanymember')
   }
-  removeMember(id:string){
+  removeMember(id:any){
     return this.http.delete<addMember[]>(environment.baseurl+'Company/job-provider/company/'+id+'/RemoveCompanyMember')
   }
 

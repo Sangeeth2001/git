@@ -17,6 +17,7 @@ export class PostjobComponent implements OnInit  {
   addCategory!:getingcategory[];
   addIndustry!:getingindustry[];
   jobData: joblist = {
+    id:'',
     jobTitle: '',
     jobSummary: '',
     locationId: '',
