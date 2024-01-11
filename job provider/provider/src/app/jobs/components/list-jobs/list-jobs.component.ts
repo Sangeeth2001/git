@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { JobserviceService } from '../../service/jobservice.service';
-import { getinglocation, joblist } from '../../model/joblist';
+import { getinglocation, joblist, } from '../../model/joblist';
 
 @Component({
   selector: 'app-list-jobs',
@@ -11,6 +11,7 @@ export class ListJobsComponent {
 
   joblisting!: joblist[];
   jobslist!: getinglocation[];
+  // removejoblist!:removejoblist[];
   constructor (private jobservice:JobserviceService){}
 
   ngOnInit(){
@@ -33,6 +34,14 @@ export class ListJobsComponent {
       console.log(joblist.name);
     })
   }
+
+  removejob(id:string){
+    this.jobservice.removejob(id).subscribe((data:any)=>{
+      
+    });
+    this.getjobs();
+  }
+
 }
 
 

@@ -1,4 +1,5 @@
 export class joblist{
+    id!:string
     jobTitle!:string;
     jobSummary!:string;
     locationId!:string;
@@ -8,6 +9,18 @@ export class joblist{
     postedBy!:any|undefined;
     postedDate!:string;
 }
+
+// export class removejoblist{
+//     id!:string
+//     jobTitle!:string;
+//     jobSummary!:string;
+//     locationId!:string;
+//     companyId!:any;
+//     categoryId!:string;
+//     industryId!:string;
+//     postedBy!:any|undefined;
+//     postedDate!:string;
+// }
 
 export class getinglocation{
     id! :string;
