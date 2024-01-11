@@ -1,3 +1,32 @@
-.logout{
+/* .logout{
     cursor: pointer;
+} */
+
+
+.navbar {
+    
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.nav-item {
+    margin-right: 20px; /* Adjust spacing between items */
+}
+
+.nav-link {
+    color: #fff; /* Set text color */
+    font-size: 18px; /* Set font size */
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: #e9ecef; /* Change color on hover */
+}
+
+.bi {
+    font-size: 24px; /* Adjust icon size */
+    margin-right: 5px; /* Add space between icon and text */
+}
+
+.logout {
+    cursor: pointer; /* Change cursor to pointer for better indication of clickable element */
 }

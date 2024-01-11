@@ -30,10 +30,6 @@ export class CmpnyserviceService {
     return this.http.get<addIndustry[]>(environment.baseurl+'v1/GetIndustries')
   }
 
-  // getCompanyList(){
-  //   const companyId=this.getCompanyId();
-  //   return this.http.get<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/company/'+companyId)
-  // }
   getCompanyList(){
     const companyId=this.getCompanyId();
     return this.http.get<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/company/'+companyId)
