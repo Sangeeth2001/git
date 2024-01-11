@@ -1,16 +1,14 @@
  <div class="row">
-    <ng-container *ngFor="let list of addMember">
-      <div class="card ml-3 mt-3 pt-2 pl-3 pr-3">
-        <p>{{list.firstName}}</p>
-        <p>{{list.lastName}}</p>
-        <p>{{list.userName}}</p>
-        <p>{{list.email}}</p>
-        <p>{{list.phone}}</p>
-        <p>{{list.password}}</p>
-        <span>
-          <button class="delete btn btn-danger" (click)="removeCompanyMember(list.id)">Delete</button>
-        </span>
-        
-      </div>
-    </ng-container>
- </div>
+  <ng-container *ngFor="let list of addMember">
+    <div class="card ml-3 mt-3 pt-2 pl-3 pr-3 custom-card">
+      <p class="member-info">{{list.firstName}} <span>{{list.lastName}}</span></p>
+      <p class="member-info">{{list.userName}}</p>
+      <p class="member-info">{{list.email}}</p>
+      <p class="member-info">{{list.phone}}</p>
+      <p class="member-info">{{list.password}}</p>
+      <span class="delete-icon-container" (click)="removeCompanyMember(list.id)">
+        <i class="bi bi-trash-fill delete-icon"></i>
+      </span>
+    </div>
+  </ng-container>
+</div>
