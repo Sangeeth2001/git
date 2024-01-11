@@ -1,6 +1,20 @@
 <div class="row flex-nowrap">
     <div class="col-md-4">
        <p class="font-weight-bold">FIND APPLICATION</p> 
-    </div>               
-</div>
+    </div>
+</div><div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card pt-2 pl-3 pr-3 w-50 custom-card">
+                <ng-container *ngFor="let list of getapplicats">
+                    <p class="name">{{list.seekerUserName}}</p>
+                    <p class="summary">{{list.jobPostJobTitle}}</p>
+                    <p class="email">{{list.resumeTitle}}</p>
+                    <p class="address">{{list.coverLetter}}</p>
+                    <p class="website">{{list.datesubmitted}}</p>
+                </ng-container>
+            </div>  
+        </div>
+    </div>
+</div>   
   
