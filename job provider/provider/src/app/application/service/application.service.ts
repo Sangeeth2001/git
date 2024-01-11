@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/app/environment/environments';
+import { applicants } from '../model/applicant';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,6 @@ export class ApplicationService {
   }
   getApplication(){
     const jobProvderId=this.getProviderId();
-    return this.http.get<[]>(environment.baseurl+'v1/job-provider/'+jobProvderId+'/getJobApplicants');
+    return this.http.get<applicants[]>(environment.baseurl+'v1/job-provider/'+jobProvderId+'/getJobApplicants');
   }
 }  
