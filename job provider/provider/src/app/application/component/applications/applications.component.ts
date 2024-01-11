@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ApplicationService } from '../../service/application.service';
+import { applicants } from '../../model/applicant';
 
 
 @Component({
@@ -8,5 +10,15 @@ import { Component } from '@angular/core';
 })
 export class ApplicationsComponent {
 
-  
+  getapplicats!: applicants[]
+  constructor(private service:ApplicationService){}
+
+  ngOnInit(){
+    this.getId();
+  }
+  getId(){
+    this.service.getApplication().subscribe((applicantsdata:any)=>{
+      this.getapplicats=applicantsdata
+    });
+  }
 }

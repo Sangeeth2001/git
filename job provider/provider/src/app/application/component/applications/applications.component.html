@@ -1,93 +1,20 @@
 <div class="row flex-nowrap">
-                    <div class="col-md-4">
-                        <p class="font-weight-bold">FIND APPLICATION</p> 
-                    </div>   
-                    
-</div>
-                <div class="row ">
-                    <input type="search" placeholder="Search by Qualification, Experience" class="form-control input-md input-sm border-dark rounded-pill">
-                </div> 
-            <div class="row mt-1">
-                <div class="col-lg-7 bg-light">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p class="p-3"></p>
-                            </div>
-                            <div class="col-md-12">
-                                <p class="p-3 ">Showing 100 Applications</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1">
-                                <img src="./image/m1.png" class="image-fluid" alt="image">
-                            </div>
-                            <div class="col-sm-7 px-3">
-                                <p class="font-weight-bold">Alex</p>
-                                <p class="text-secondary">. Location</p>
-                                <p class="  small">Qualification : MBA <br>
-                                    Experience : 2 YEARS</p>
-                            </div>
-                            <div class="col-md-1">
-                                <img src="./image/Group 569.png" width="25" alt="image">
-                            </div>
-                            <div class="col-md-5 p-2"></div>
-                            <div class="col-md-2">
-                                <input class="rounded-pill bg-primary border-0"  type="button" value="View">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 p-2">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-1">
-                                <img src="./image/m2.png" class="image-fluid" alt="image">
-                            </div>
-                            <div class="col-sm-7 ">
-                                <p class="font-weight-bold">Ameya</p>
-                                <p class="text-secondary">. Location</p>
-                                <p class="  small">Qualification : B.TECH <br>
-                                    Experience : 5 YEARS</p>
-                            </div>                 
-                            <div class="col-md-1">
-                                <img src="./image/Group 569.png" width="25" alt="image">
-                            </div>
-                            <div class="col-md-5 p-2"></div>
-                            <div class="col-md-2">
-                                <input class="rounded-pill bg-primary border-0"  type="button" value="View">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 p-2">
-                                <p></p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-1">
-                                <img src="./image/m1.png" class="image-fluid" alt="image">
-                            </div>
-                            <div class="col-sm-7 ">
-                                <p class="font-weight-bold">Ommer</p>
-                                <p class="text-secondary">. Location</p>
-                                <p class="  small">Qualification : MCA <br>
-                                    Experience : 4 YEARS</p>
-                            </div>                 
-                            <div class="col-md-1">
-                                <img src="./image/Group 569.png" width="25rem" alt="image">
-                            </div>
-                            <div class="col-md-5 p-2"></div>
-                            <div class="col-md-2">
-                                <input class="rounded-pill bg-primary border-0"  type="button" value="View">
-                            </div>
-                        </div>
-
-                    
-                </div>
-                <div class="col-5">
-                    <img src="./image/business-finance-employment-female-successful-entrepreneurs-concept-young-confident-businesswoman-glasses-showing-thumbs-up-gesture-hold-laptop-guarantee-best-service-quality 1.png" height="665px" width="320px" alt="">
-                </div>
-                
+    <div class="col-md-4">
+       <p class="font-weight-bold">FIND APPLICATION</p> 
+    </div>
+</div><div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card pt-2 pl-3 pr-3 w-50 custom-card">
+                <ng-container *ngFor="let list of getapplicats">
+                    <p class="name">{{list.seekerUserName}}</p>
+                    <p class="summary">{{list.jobPostJobTitle}}</p>
+                    <p class="email">{{list.resumeTitle}}</p>
+                    <p class="address">{{list.coverLetter}}</p>
+                    <p class="website">{{list.datesubmitted}}</p>
+                </ng-container>
+            </div>  
+        </div>
+    </div>
+</div>   
   

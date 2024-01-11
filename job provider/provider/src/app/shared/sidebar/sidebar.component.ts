@@ -35,4 +35,5 @@ export class SidebarComponent {
   navigatetocompany(){
     this.router.navigate(['home/company']);
   }
+  
 }
