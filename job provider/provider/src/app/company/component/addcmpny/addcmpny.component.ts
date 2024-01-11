@@ -37,6 +37,9 @@ export class AddcmpnyComponent {
     this.Cservice.verifycmpny(data).subscribe((response:any)=>{
       console.log(response.id);
       const addCmpnyDetails=sessionStorage.setItem('c_id',response.id)
+      if(response.id){
+        alert("Company registered successfully")
+      }
     }
     
   );
