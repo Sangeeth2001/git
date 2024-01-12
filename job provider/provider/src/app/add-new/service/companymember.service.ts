@@ -25,6 +25,4 @@ export class CompanymemberService {
   removeMember(id:any){
     return this.http.delete<addMember[]>(environment.baseurl+'Company/job-provider/company/'+id+'/RemoveCompanyMember')
   }
-
-
 }

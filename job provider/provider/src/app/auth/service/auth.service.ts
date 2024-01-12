@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { setPassword, signupDetails,setlogin } from '../model/signup';
+import { setPassword, signupDetails,setlogin, } from '../model/signup';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/app/environment/environments';
 
