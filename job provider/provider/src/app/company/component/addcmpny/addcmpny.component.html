@@ -7,9 +7,9 @@
                     <h3 class="text-center">Register Your Company Here</h3>
                       <form [formGroup]="cmpnyregisterForm" (ngSubmit)="submitt()">
                         <label for="">LegalName:</label><br>
-                        <input type="text" placeholder="Enter legalName"  class=" form-control" formControlName="legalName" [ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['firstName'].errors}">
+                        <input type="text" placeholder="Enter legalName"  class=" form-control" formControlName="legalName" [ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['legalName'].errors}">
                         <label for="">Summary:</label>
-                        <input type="text" placeholder="Enter summary"  class="  form-control" formControlName="summary" [ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['lastName'].errors}">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="Enter summary" class="form-control" formControlName="summary"[ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['summary'].errors}"></textarea> 
                         <label for="">Industry:</label><br>
                         <select name="industryId" class="form-control" formControlName="industryId" id="">
                           <option [value]="industry.id" *ngFor="let industry of addIndustry">
@@ -21,7 +21,8 @@
                         <label for="">Phone:</label>
                         <input type="tel" placeholder="Enter Phone number"  class=" form-control" formControlName="phone" [ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['phone'].errors}">
                         <label for="">Address:</label><br>
-                        <input type="text" placeholder="Enter address"  class=" form-control" formControlName="address" [ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['address'].errors}">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="Enter address" class="form-control" formControlName="address"[ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['address'].errors}"></textarea> 
+                      
                         <label for="">Website:</label><br>
                         <input type="text" placeholder="Enter website"  class=" form-control" formControlName="website" [ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['website'].errors}">
                         <label for="">Location:</label><br>

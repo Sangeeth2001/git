@@ -18,7 +18,8 @@ export class LoginComponent {
     this.authService.verifyLogin(data).subscribe((response: any)=>{
       console.log(response);
       const token= localStorage.setItem('accessToken',response.token)
-      const id=sessionStorage.setItem('accessid',response.id)
+      const id=localStorage.setItem('accessid',response.id)
+      const companyId=localStorage.getItem('c_id')
       if (response.token){
         alert("login successfully")
         this.router.navigate(['/home/dashboard']);

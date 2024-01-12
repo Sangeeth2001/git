@@ -38,7 +38,7 @@ export class AddcmpnyComponent {
       this.addCmpnyDetails=response;
       console.log(this.addCmpnyDetails);
       console.log(response.id);
-      const addCmpnyDetails=sessionStorage.setItem('c_id',response.id)
+      const addCmpnyDetails=localStorage.setItem('c_id',response.id)
       if(response.id){
         alert("Company registered successfully")
       }

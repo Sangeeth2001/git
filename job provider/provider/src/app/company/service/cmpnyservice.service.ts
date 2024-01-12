@@ -10,10 +10,10 @@ export class CmpnyserviceService {
 
   constructor(private http:HttpClient) { }
   getId(): any {
-    return sessionStorage.getItem('accessid') // Return an empty string if the token is null or undefined
+    return localStorage.getItem('accessid') // Return an empty string if the token is null or undefined
   }
   getCompanyId():any{
-    return sessionStorage.getItem('c_id')
+    return localStorage.getItem('c_id')
   }
   
   verifycmpny(data:any){

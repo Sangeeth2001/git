@@ -11,7 +11,7 @@ export class CompanymemberService {
   constructor(private http:HttpClient) { }
 
   getCompanyId(): any {
-    return sessionStorage.getItem('c_id') // Return an empty string if the token is null or undefined
+    return localStorage.getItem('c_id') // Return an empty string if the token is null or undefined
   }
 
   companyMember(data:any){

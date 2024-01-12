@@ -31,7 +31,7 @@ export class JobserviceService {
   }
 
   getCompanyIds():any{
-    return sessionStorage.getItem('c_id')
+    return localStorage.getItem('c_id')
   }
 
   getJobList(){
