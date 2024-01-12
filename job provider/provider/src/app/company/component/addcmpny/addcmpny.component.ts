@@ -11,7 +11,7 @@ import { CmpnyserviceService } from '../../service/cmpnyservice.service';
 export class AddcmpnyComponent {
   cmpnyregisterForm!:FormGroup
   submitted:boolean=false;
-  addCmpnyDetails!:addcmpnyDetails;
+  addCmpnyDetails!:addcmpnyDetails[];
   addLocation!:addLocation[];
   addIndustry!:addIndustry[];
 
@@ -35,6 +35,8 @@ export class AddcmpnyComponent {
   submitt(){
     const data= this.cmpnyregisterForm.value
     this.Cservice.verifycmpny(data).subscribe((response:any)=>{
+      this.addCmpnyDetails=response;
+      console.log(this.addCmpnyDetails);
       console.log(response.id);
       const addCmpnyDetails=sessionStorage.setItem('c_id',response.id)
       if(response.id){
