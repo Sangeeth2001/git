@@ -18,7 +18,8 @@ import { AuthInterceptor } from './core/interceptor/auth.interceptor';
     AppRoutingModule,
     SharedModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    
     
     
   ],

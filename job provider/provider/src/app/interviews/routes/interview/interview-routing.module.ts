@@ -5,7 +5,7 @@ import { InterviewScheduleComponent } from '../../components/interview-schedule/
 const routes: Routes = [
   {
     path:'',component:InterviewScheduleComponent
-  }
+  },
 ];
 
 @NgModule({
