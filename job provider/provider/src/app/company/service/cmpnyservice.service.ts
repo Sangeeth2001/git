@@ -10,29 +10,29 @@ export class CmpnyserviceService {
 
   constructor(private http:HttpClient) { }
   getId(): any {
-    return sessionStorage.getItem('accessid') // Return an empty string if the token is null or undefined
+    return sessionStorage.getItem('accessid'); // Return an empty string if the token is null or undefined
   }
   getCompanyId():any{
-    return sessionStorage.getItem('c_id')
+    return sessionStorage.getItem('c_id');
   }
 
   
   verifycmpny(data:any){
     const jobProviderId=this.getId();
-    return this.http.post<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/'+jobProviderId+'/company',data)
+    return this.http.post<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/'+jobProviderId+'/company',data);
   }
 
   getLocation(){
-    return this.http.get<addLocation[]>(environment.baseurl+'v1/GetLocations')
+    return this.http.get<addLocation[]>(environment.baseurl+'v1/GetLocations');
   }
 
   getIndustry(){
-    return this.http.get<addIndustry[]>(environment.baseurl+'v1/GetIndustries')
+    return this.http.get<addIndustry[]>(environment.baseurl+'v1/GetIndustries');
   }
 
   getCompanyList(){
     const companyId=this.getCompanyId();
-    return this.http.get<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/company/'+companyId)
+    return this.http.get<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/company/'+companyId);
   }
 
 }
