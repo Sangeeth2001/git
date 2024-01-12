@@ -1,9 +1,4 @@
 <div class="row">
-  <div class=" col d-flex justify-content-end pl-1">
-      <a class="text-decoration-none text-dark" [routerLink]="['addnew/remove']">
-        <h5>Remove member</h5>
-      </a>
-  </div>
   <div class="col">
     <a class="text-dark text-decoration-none" [routerLink]="['addnew/list']">
       <h5>List of member</h5>
@@ -13,7 +8,7 @@
   <div class="row">
     <div class="col-md-10 border pt-3 card shadow rounded-5 mx-3 custom-form">
       <h5 class="form-title d-none d-sm-inline">Registration of new member</h5>
-      <form action="" [formGroup]="registerMember" (ngSubmit)="addCompany()">
+      <form action="" [formGroup]="registerMember" (ngSubmit)="addCompanyMember()">
         <div class="row">
           <div class="col-md-6">
             <label class="form-label" for="firstName">First Name</label>
@@ -41,7 +36,7 @@
           </div>
           <div class="col-md-6">
             <label class="form-label" for="password">Password</label>
-            <input type="text" placeholder="Enter password" class="form-control" formControlName="password">
+            <input type="password" placeholder="Enter password" class="form-control" formControlName="password">
           </div>
         </div>
         <div class="col d-flex justify-content-center pt-3 mb-3">

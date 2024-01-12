@@ -12,10 +12,7 @@ import { setlogin } from '../../model/signup';
 export class LoginComponent {
   
   constructor(private router:Router , private authService:AuthService){}
-  // navigateTo()
-  // {
-  //   this.router.navigate(['/provider-home/dashboard']);
-  // }
+ 
 
   login(data:any){
     this.authService.verifyLogin(data).subscribe((response: any)=>{

@@ -1,3 +1,30 @@
 .card{
     min-width: 15em;
 }
+.custom-card {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .member-info {
+    font-size: 16px;
+    color: #495057;
+  }
+  
+  .delete-icon-container {
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .delete-icon {
+    font-size: 20px;
+    color: #dc3545; 
+    transition: color 0.3s ease; 
+  }
+  
+  .delete-icon:hover {
+    color: #bd2130; 
+  }
+  
