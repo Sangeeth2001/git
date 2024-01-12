@@ -15,7 +15,6 @@ export class CmpnyserviceService {
   getCompanyId():any{
     return sessionStorage.getItem('c_id');
   }
-
   
   verifycmpny(data:any){
     const jobProviderId=this.getId();
@@ -34,5 +33,4 @@ export class CmpnyserviceService {
     const companyId=this.getCompanyId();
     return this.http.get<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/company/'+companyId);
   }
-
 }

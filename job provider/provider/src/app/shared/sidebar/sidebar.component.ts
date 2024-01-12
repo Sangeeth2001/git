@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/service/auth.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,8 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  constructor (private router: Router) {}
+  constructor (private router: Router ,private service:AuthService) {
+    this.accessId=service.getid();
+  }
 
+  getId(): any {
+    return sessionStorage.getItem('accessid') // Return an empty string if the token is null or undefined
+  }
+
+   accessId=this.getId();
 
   navigatetoDashboard(){
     this.router.navigate(['home/dashboard']);
