@@ -6,7 +6,6 @@ import { ProviderHomeRoutingModule } from './routes/provider-home/provider-home-
 
 
 
-
 @NgModule({
   declarations: [
     HomeComponent,   

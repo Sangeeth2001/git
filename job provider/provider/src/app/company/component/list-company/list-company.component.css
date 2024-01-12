@@ -18,6 +18,7 @@
     padding: 20px;
     background-color: #fff;
     transition: box-shadow 0.3s ease-in-out;
+   
 }
 
 .custom-card:hover {
@@ -44,4 +45,6 @@
 .website a:hover {
     color: #004080; 
 }
-
+button{
+    height: 2.2em;
+}
