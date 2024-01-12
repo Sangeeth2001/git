@@ -11,7 +11,7 @@
 
                     <span>
                         <button class="delete btn btn-danger" (click)="removejob(list.id)">Delete</button>
-                        <button class="delete btn btn-primary ml-5">Update</button>
+                        <a routerLink="../UpdateJobs/{{list.id}}"><button class="delete btn btn-primary ml-5">Update</button></a>
                     </span>
                 </div>
             </ng-container>
