@@ -67,6 +67,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { JobserviceService } from '../../service/jobservice.service';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-update-job',
   templateUrl: './update-job.component.html',
@@ -74,6 +75,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UpdateJobComponent implements OnInit {
   UpdateJobs: FormGroup;
+  dataID!:any
+  datas!:any
 
   constructor(private formBuilder: FormBuilder, private jb: JobserviceService, private router: ActivatedRoute) {
     this.UpdateJobs = this.formBuilder.group({
@@ -87,19 +90,28 @@ export class UpdateJobComponent implements OnInit {
 
   ngOnInit(): void {
     
-    const jobId = this.router.snapshot.params['id'];
-    console.log(jobId);
-    this.jb.getCurrentdata(jobId).subscribe((result: any) => {
+    this.dataID = this.router.snapshot.paramMap.get('id');
+    console.log(this.dataID);
+    this.jb.getCurrentdata(this.dataID).subscribe((result: any) => {
+      console.log('data',result)
+      this.datas = result.datas
       this.UpdateJobs.patchValue({
-        jobTitle: result['jobTitle'],
-        jobSummary: result['jobSummary'],
-        locationId: result['locationId'],
-        categoryId: result['categoryId'],
-        industryId: result['industryId']
+        jobTitle: result.jobTitle,
+        jobSummary: result.jobSummary,
+        locationId: result.locationId,
+        categoryId: result.categoryId,
+        industryId: result.industryId
       });
     })
 
   }
+
+  updateJob(){
+    this.jb.updateJob(this.router.snapshot.params['id'],this.UpdateJobs.value).subscribe((result)=>{
+      console.log(result,"Data Updated Sucessfull")
+    })
+  }
+  
 
   
   
