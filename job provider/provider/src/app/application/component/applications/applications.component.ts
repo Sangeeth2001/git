@@ -15,14 +15,16 @@ export class ApplicationsComponent {
   constructor(private service:ApplicationService,private router:Router, private route: ActivatedRoute){}
 
   ngOnInit(){
-    
-   
-   
+   this.listapplicants();
   }
   getId(data:applicants):void{
    const jobSeekerId=data.id;
    this.router.navigate(['/applicants',jobSeekerId])
   }
 
- 
+  listapplicants(){
+    this.service.getApplication().subscribe((Response:any)=>{
+      this.getapplicats=Response;
+    })
+  }
 }

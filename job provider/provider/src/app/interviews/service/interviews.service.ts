@@ -11,7 +11,7 @@ export class InterviewsService {
   constructor(private http: HttpClient) { }
 
   getId(){
-    return sessionStorage.getItem('accessid');
+    return localStorage.getItem('accessid');
   }
 
   postinterview(data:any){

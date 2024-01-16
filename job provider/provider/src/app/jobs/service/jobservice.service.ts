@@ -29,7 +29,7 @@ export class JobserviceService {
   }
 
   getproviderIds():any{
-    return sessionStorage.getItem('accessid');
+    return localStorage.getItem('accessid');
   }
 
   getCompanyIds():any{
