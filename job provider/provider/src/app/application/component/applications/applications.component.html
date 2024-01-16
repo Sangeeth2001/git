@@ -1,48 +1,16 @@
-<!-- <div class="row flex-nowrap">
-    <div class="col-md-4">
-       <p class="font-weight-bold">FIND APPLICATION</p> 
-    </div>
-</div><div class="container-fluid">
     <div class="row">
-        <div class="col-md-8">
-            <div class="card pt-2 pl-3 pr-3 w-50 custom-card">
-                <ng-container *ngFor="let list of getapplicats">
-                    <p class="name">{{list.seekerUserName}}</p>
-                    <p class="summary">{{list.jobPostJobTitle}}</p>
-                    <p class="email">{{list.resumeTitle}}</p>
-                    <p class="address">{{list.coverLetter}}</p>
-                    <p class="website">{{list.datesubmitted}}</p>
-                </ng-container>
-                <div class=" d-flex justify-content-end">
-                    <a [routerLink] ="['../applicants',list.id]"></a><button (click)="getId(list)" class="btn w-100 border-0 text-white rounded">Schedule</button>
-                </div>
-            </div>  
-        </div>
-    </div>
-</div>    -->
-<div class="row flex-nowrap">
-    <div class="col-md-4">
-       <p class="font-weight-bold">FIND APPLICATION</p> 
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="card pt-2 pl-3 pr-3 w-50 custom-card">
-                <ng-container *ngFor="let list of getapplicats">
-                    <p class="name">{{list.seekerUserName}}</p>
-                    <p class="summary">{{list.jobPostJobTitle}}</p>
-                    <p class="email">{{list.resumeTitle}}</p>
-                    <p class="address">{{list.coverLetter}}</p>
-                    <p class="website">{{list.datesubmitted}}</p>
-                    
-                    <div class="d-flex justify-content-end">
-                        <a [routerLink]="['../applicants', list.id]">
-                        <button (click)="getId(list)" class="btn w-100 border-0 text-white rounded">Schedule</button>
-                        </a>
-                    </div>
-                </ng-container>
-            </div>  
-        </div>
-    </div>
-</div>
+        <ng-container *ngFor="let list of getapplicats">
+          <div class="card ml-3 mt-3 pt-2 pl-3 pr-3 custom-card">
+            <p class="member-info"><b>{{list.seekerUserName}}</b></p>
+            <p class="member-info">{{list.jobPostJobTitle}}</p>
+            <p class="member-info">{{list.resumeTitle}}</p>
+            <p class="member-info">{{list.coverLetter}}</p>
+            <p class="member-info">{{list.datesubmitted}}</p>
+            <div class="d-flex justify-content-end">
+                <a [routerLink]="['./applicants', list.id]">
+                <button (click)="getId(list)" class="btn w-100 border-0 text-white rounded">Schedule</button>
+                </a>
+            </div>
+          </div>
+        </ng-container>
+      </div>

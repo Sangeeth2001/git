@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { InterviewsService } from 'src/app/interviews/service/interviews.service';
+import { applicants, applicationid } from '../../model/applicant';
 
 @Component({
   selector: 'app-schedule',
@@ -10,24 +11,29 @@ import { InterviewsService } from 'src/app/interviews/service/interviews.service
 })
 export class ScheduleComponent {
   jobSeekerId!:string;
+  applicants!:applicationid[];
 
-  getapplicants!:FormGroup
+  // getapplicants!:FormGroup;
+  applicantsform!:FormGroup;
   constructor(private service:InterviewsService , private formbuilder:FormBuilder, private route:ActivatedRoute){}
 
   ngOnInit(){
-    // this.postapplicants();
+    this.applicantsform=this.formbuilder.group({
+      date:['',[Validators.required]]
+    });
     this.route.params.subscribe((params)=>{
       this.jobSeekerId=params['id'];
-      console.log(this.jobSeekerId);
-      alert(this.jobSeekerId)
-    })
+    });
+    
   }
 
-//   postapplicants(){
-//     const data=this.getapplicants.value
-//     this.service.postinterview(data).subscribe((Response:any)=>{
-//       console.log(Response.applicationId);
-      
-//     })
-// }
+  postapplicants(){
+    
+    const data=this.applicantsform.value
+
+    this.service.postinterview(data).subscribe((resp:any)=>{
+      this.applicants=resp;
+      console.log(resp.applicationId);
+    })
+}
 }
