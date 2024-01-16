@@ -1,8 +1,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-8">
-            <div class="card pt-2 pl-3 pr-3 custom-card">
+            <div class="card mt-3 pt-2 pl-3 pr-3 custom-card">
                 <ng-container *ngFor="let list of company">
+                    <span class="d-flex justify-content-end"><i class="bi bi-pencil-square"></i></span>
                     <p class="name">{{list.legalName}}</p>
                     <p class="summary">{{list.summary}}</p>
                     <p class="email">{{list.email}}</p>
@@ -12,9 +13,9 @@
             </div>  
         </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-md-8 d-flex justify-content-center mt-2">
             <button class="btn btn-secondary">update</button>
         </div> 
-    </div>
+    </div> -->
 </div>

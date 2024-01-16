@@ -11,6 +11,7 @@ import { addMember } from '../../model/member';
 export class AddMemberComponent {
 
   registerMember!:FormGroup
+  memberList:boolean=false;
   addMember!:addMember[];
 
   constructor(private service:CompanymemberService, private fb:FormBuilder ){}
@@ -27,6 +28,7 @@ export class AddMemberComponent {
   }
 
   addCompanyMember(){
+    this.memberList=true;
     const data= this.registerMember.value
     this.service.companyMember(data).subscribe((response:any)=>{
       this.addMember=response;
