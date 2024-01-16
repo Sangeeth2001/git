@@ -62,6 +62,12 @@ export class JobserviceService {
 
   }
 
+  updateJob(id:string,data:any){
+    const jobProvderId=this.getproviderIds();
+    const CompanyId=this.getCompanyIds();
+    return this.http.post<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/job-provider/'+jobProvderId+'/job/'+id,data)
+  }
+
 
 
   
