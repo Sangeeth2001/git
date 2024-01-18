@@ -7,10 +7,11 @@ const routes: Routes = [
   {
     path:'',component:ApplicationsComponent
   },
-  {
-    path:'applicants/:id',component:ScheduleComponent
-  },
- 
+  { 
+    path: 'applicants/:id', component: ScheduleComponent
+  }
+  
+
 ];
 
 @NgModule({

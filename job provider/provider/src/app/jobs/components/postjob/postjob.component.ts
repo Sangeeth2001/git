@@ -76,10 +76,10 @@ export class PostjobComponent implements OnInit  {
     this.jobData.jobTitle=formData.jobTitle;
     this.jobData.jobSummary=formData.jobSummary;
     this.jobData.locationId=formData.locationId;
-    this.jobData.companyId=sessionStorage.getItem('c_id');
+    this.jobData.companyId=localStorage.getItem('c_id');
     this.jobData.categoryId=formData.categoryId;
     this.jobData.industryId=formData.industryId;
-    this.jobData.postedBy=sessionStorage.getItem('accessid');
+    this.jobData.postedBy=localStorage.getItem('accessid');
     this.jobData.postedDate=postedDate;
     
     // formData.postedDate = postedDate;

@@ -7,3 +7,8 @@ export class applicants{
     datesubmitted!:string;
     status!:string; 
 }
+
+export class applicationid{
+    applicationId!:string; 
+    date!:any; 
+}

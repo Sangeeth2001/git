@@ -29,7 +29,7 @@ export class JobserviceService {
   }
 
   getproviderIds():any{
-    return sessionStorage.getItem('accessid');
+    return localStorage.getItem('accessid');
   }
 
   getCompanyIds():any{
@@ -60,6 +60,12 @@ export class JobserviceService {
     const CompanyId=this.getCompanyIds();
     return this.http.get<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/job-provider/'+jobProvderId+'/job/'+id)
 
+  }
+
+  updateJob(id:string,data:any){
+    const jobProvderId=this.getproviderIds();
+    const CompanyId=this.getCompanyIds();
+    return this.http.post<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/job-provider/'+jobProvderId+'/job/'+id,data)
   }
 
 
