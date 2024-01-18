@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../service/auth.service';
-import { setlogin } from '../../model/signup';
-
 
 @Component({
   selector: 'app-login',
@@ -19,12 +17,12 @@ export class LoginComponent {
       console.log(response);
       const token= localStorage.setItem('accessToken',response.token)
       const id=localStorage.setItem('accessid',response.id)
+      const role=localStorage.setItem('role',response.role)
       const companyId=localStorage.getItem('c_id')
       if (response.token){
         alert("login successfully")
         this.router.navigate(['/home/dashboard']);
       }
-
   },
   (error)=>{
     alert("error")

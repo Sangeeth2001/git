@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { setPassword, signupDetails,setlogin, } from '../model/signup';
+import { setPassword, signupDetails,setlogin } from '../model/signup';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/app/environment/environments';
 
@@ -32,4 +32,8 @@ export class AuthService {
   verifyLogin(data:any){
     return this.http.post<setlogin[]>(environment.baseurl+'v1/job-provider/login',data)
   }
+  getRole(){
+    return localStorage.getItem('role')
+  }
+ 
 }
