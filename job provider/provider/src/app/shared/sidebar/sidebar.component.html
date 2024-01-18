@@ -36,13 +36,13 @@
         <span class="ms-1 d-none d-sm-inline pl-1">Settings</span>
       </a>
   </li><br>
-  <li  class="mt-2"(click)="navigatetocompany()">
+  <li *ngIf="userMenu()" class="mt-2"(click)="navigatetocompany()">
     <a  class="nav-link px-0 align-middle text-white">
       <i class="bi bi-building"></i>
       <span class="ms-1 d-none d-sm-inline pl-1">Company</span>
     </a>
 </li><br>
-  <li class="mt-2"(click)="navigatetoAddnew()">
+  <li *ngIf="userMenu()" class="mt-2"(click)="navigatetoAddnew()">
       <a  class="nav-link px-0 align-middle text-white">
         <i class="bi bi-person-plus-fill text-white"></i>
         <span class="d-none d-sm-inline pl-1">Add new</span>

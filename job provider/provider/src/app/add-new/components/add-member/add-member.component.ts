@@ -22,13 +22,14 @@ export class AddMemberComponent {
       lastName:['',[Validators.required]],
       userName:['',[Validators.required]],
       email:['',[Validators.required]],
-      phone:['',[Validators.required]],
+      phone:['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       password:['',[Validators.required]],
     })
   }
 
   addCompanyMember(){
     this.memberList=true;
+    if (this.registerMember.valid) {
     const data= this.registerMember.value
     this.service.companyMember(data).subscribe((response:any)=>{
       this.addMember=response;
@@ -36,5 +37,6 @@ export class AddMemberComponent {
   );
    this.registerMember.reset();
   }
+}
 
 }
