@@ -10,7 +10,7 @@ import { getinglocation, joblist, } from '../../model/joblist';
 export class ListJobsComponent {
 
   joblisting!: joblist[];
-  jobslist!: getinglocation[];
+  loc!: getinglocation[];
   // removejoblist!:removejoblist[];
   constructor (private jobservice:JobserviceService){}
 
@@ -30,7 +30,7 @@ export class ListJobsComponent {
 
   getjobs(){
     this.jobservice.getLocation().subscribe((data:any)=>{
-      this.jobslist=data;
+      this.loc=data;
       console.log(joblist.name);
     })
   }

@@ -56,16 +56,18 @@ export class JobserviceService {
   }
 
   getCurrentdata(id:string){
-    const jobProvderId=this.getproviderIds();
+    // const jobProvderId=this.getproviderIds();
     const CompanyId=this.getCompanyIds();
-    return this.http.get<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/job-provider/'+jobProvderId+'/job/'+id)
+    // return this.http.get<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/job-provider/'+jobProvderId+'/job/'+id)
+    return this.http.get<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/jobs/'+id)
+
 
   }
 
   updateJob(id:string,data:any){
     const jobProvderId=this.getproviderIds();
     const CompanyId=this.getCompanyIds();
-    return this.http.post<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/job-provider/'+jobProvderId+'/job/'+id,data)
+    return this.http.put<joblist[]>(environment.baseurl+'v1/company/'+CompanyId+'/job-provider/'+jobProvderId+'/job/'+id,data)
   }
 
 
