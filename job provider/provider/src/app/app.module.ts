@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './core/interceptor/auth.interceptor';
+import { CompanyRoutingModule } from './company/company-routing.module';
 
 
 
@@ -18,10 +19,7 @@ import { AuthInterceptor } from './core/interceptor/auth.interceptor';
     AppRoutingModule,
     SharedModule,
     RouterModule,
-    HttpClientModule,
-    
-    
-    
+    HttpClientModule, 
   ],
   providers: [    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },],
   bootstrap: [AppComponent]

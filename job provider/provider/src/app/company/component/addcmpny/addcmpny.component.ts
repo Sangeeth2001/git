@@ -14,6 +14,7 @@ export class AddcmpnyComponent {
   addCmpnyDetails!:addcmpnyDetails[];
   addLocation!:addLocation[];
   addIndustry!:addIndustry[];
+  
 
   constructor(private Cservice:CmpnyserviceService, private fb:FormBuilder){}
 
@@ -22,11 +23,11 @@ export class AddcmpnyComponent {
     this.getIndustry();
     this.cmpnyregisterForm=this.fb.group({
       legalName:['',[Validators.required]],
-      summary:['',[Validators.required]],
+      summary: ['', [Validators.required, Validators.maxLength(255)]],
       industryId:['',[Validators.required]],
       email:['',[Validators.required]],
       phone:['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
-      address:['',[Validators.required]],
+      address: ['', [Validators.required, Validators.maxLength(255)]],
       website:['',[Validators.required]],
       location:['',[Validators.required]]
     })
