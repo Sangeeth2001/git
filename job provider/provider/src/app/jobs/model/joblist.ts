@@ -1,5 +1,5 @@
 export class joblist{
-    id!:string
+    id!:string;
     jobTitle!:string;
     jobSummary!:string;
     locationId!:string;

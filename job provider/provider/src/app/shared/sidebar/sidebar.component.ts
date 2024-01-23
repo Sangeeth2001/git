@@ -9,11 +9,12 @@ import { AuthService } from 'src/app/auth/service/auth.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  constructor (private router: Router ,private service:AuthService) {}
-
   
-
-
+  submit:boolean=false;
+  constructor (private router: Router , private authservice:AuthService) {}
+  ngOnInit(){
+    
+  }
 
   navigatetoDashboard(){
     this.router.navigate(['home/dashboard']);
@@ -37,8 +38,19 @@ export class SidebarComponent {
   navigatetoapplication(){
     this.router.navigate(['home/applications']);
   }
-  navigatetocompany(){
-    this.router.navigate(['home/company']);
+  navigatetocompany() {
+      this.router.navigate(['home/company']);
   }
-  
+
+userMenu(){
+  // const submit= this.submit=true;
+  const userRole = this.authservice.getRole();
+  // submit&&userRole;
+
+    if (userRole === 'COMPANY_USER') {
+      return false;
+    } else {
+      return true; 
+    }
+  } 
 }

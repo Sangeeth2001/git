@@ -7,7 +7,7 @@ label{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px auto;
-    /* max-width: 600px; */
+   
   }
 
   .form-title {
@@ -22,13 +22,6 @@ label{
     color: #555;
   }
 
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-  }
-
   .form-button {
     background-color: #4caf50;
     color: #fff;
@@ -41,9 +34,3 @@ label{
   .form-button:hover {
     background-color: #45a049;
   }
-
-  /* @media (max-width: 767px) {
-    .col-md-6 {
-      width: 100%;
-    }
-  } */
