@@ -33,4 +33,8 @@ export class CmpnyserviceService {
     const companyId=this.getCompanyId();
     return this.http.get<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/company/'+companyId);
   }
+  updatingForm(data:any){
+    const companyId=this.getCompanyId();
+    return this.http.put<addcmpnyDetails[]>(environment.baseurl+'Company/job-provider/company/'+companyId,data )
+  }
 }

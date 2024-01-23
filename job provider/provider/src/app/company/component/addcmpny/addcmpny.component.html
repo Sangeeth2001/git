@@ -6,9 +6,6 @@
                     <div class="row w-50 d-block mx-auto mt-4" >
                     <h3 class="text-center">Register Your Company Here</h3>
                       <form [formGroup]="cmpnyregisterForm" (ngSubmit)="submitt()">
-                        <div>
-                          
-                        </div>
                         <label for="">LegalName:</label><br>
                         <input type="text" placeholder="Enter legalName"  class=" form-control" formControlName="legalName" [ngClass]="{'is-invalid':submitted && cmpnyregisterForm.controls['legalName'].errors}">
                         <label for="">Summary:</label>

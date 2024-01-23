@@ -14,6 +14,7 @@ export class AddcmpnyComponent {
   addCmpnyDetails!:addcmpnyDetails[];
   addLocation!:addLocation[];
   addIndustry!:addIndustry[];
+  
 
   constructor(private Cservice:CmpnyserviceService, private fb:FormBuilder){}
 
