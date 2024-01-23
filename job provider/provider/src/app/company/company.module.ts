@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CompanyRoutingModule } from './company-routing.module';
 import { ListCompanyComponent } from './component/list-company/list-company.component';
+import { UpdateCompanyComponent } from './component/update-company/update-company.component';
+
 
 
 
@@ -12,7 +14,8 @@ import { ListCompanyComponent } from './component/list-company/list-company.comp
 @NgModule({
   declarations: [
     AddcmpnyComponent,
-    ListCompanyComponent
+    ListCompanyComponent,
+    UpdateCompanyComponent
   ],
   imports: [
     CommonModule,
