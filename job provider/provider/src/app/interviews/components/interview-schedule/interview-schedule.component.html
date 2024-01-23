@@ -2,6 +2,35 @@
     <div class="row flex-nowrap ">
         <div class="col-md-12">
             <h4>Interview List</h4>
+            <ng-container *ngFor="let list of applicants" >
+                <div class="card ml-3 mt-3 pt-2 pl-3 pr-3 custom-card">
+                  <p class="member-info"><b>{{list.seekerUserName}}</b></p>
+                  <p class="member-info">{{list.jobPostJobTitle}}</p>
+                  <p *ngFor="let list of applicationid" class="member-info">{{list.date}}</p>
+                  <div class="d-flex justify-content-end" (click)="removeInterviewlist(list.id)">
+                    <i class="bi bi-trash-fill delete-icon"></i>
+                  </div>
+                </div>
+              </ng-container>
         </div>
     </div>
 </div>
+
+
+<!-- <div class="container-fluid">
+    <div class="row flex-nowrap">
+      <div class="col-md-12">
+        <h4>Interview List</h4>
+        <ng-container *ngFor="let applicant of applicants; let i = index">
+          <div class="card ml-3 mt-3 pt-2 pl-3 pr-3 custom-card">
+            <p class="member-info"><b>{{ applicant.seekerUserName }}</b></p>
+            <p class="member-info">{{ applicant.jobPostJobTitle }}</p>
+            <p class="member-info">{{ applicationid[i]?.date }}</p>
+            <div class="d-flex justify-content-end">
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+   -->

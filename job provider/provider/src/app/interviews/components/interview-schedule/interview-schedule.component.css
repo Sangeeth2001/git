@@ -1,0 +1,15 @@
+.delete-icon-container {
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .delete-icon {
+    font-size: 20px;
+    color: #dc3545; 
+    transition: color 0.3s ease; 
+  }
+  
+  .delete-icon:hover {
+    color: #bd2130; 
+  }

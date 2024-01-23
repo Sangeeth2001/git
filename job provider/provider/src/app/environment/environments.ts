@@ -1,3 +1,3 @@
 export const environment = {
-    baseurl:'http://192.168.0.65/HireMeNow/api/'
+    baseurl:'http://192.168.0.53/HireMeNow/api/'
 }

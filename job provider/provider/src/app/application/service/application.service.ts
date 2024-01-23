@@ -15,6 +15,18 @@ export class ApplicationService {
   }
   getApplication(){
     const jobProvderId=this.getProviderId();
-    return this.http.get<applicationid[]>(environment.baseurl+'v1/job-provider/'+jobProvderId+'/getJobApplicants');
+    return this.http.get<applicants[]>(environment.baseurl+'v1/job-provider/'+jobProvderId+'/getJobApplicants');
+  }
+  
+  postDate(data:any){
+    const jobProvderId=this.getProviderId();
+    return this.http.post<applicationid[]>(environment.baseurl+'Interview/company/company-user/'+jobProvderId+'/Interview',data)
+  }
+  getCompanyId(){
+    return localStorage.getItem('c_id')
+  }
+  getDatelist(){
+    const companyId=this.getCompanyId();
+    return this.http.get<applicationid[]>(environment.baseurl+'Interview/company/company-user/'+companyId+'/Interviewlist')
   }
 }  
