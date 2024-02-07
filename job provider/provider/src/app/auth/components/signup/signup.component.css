@@ -3,4 +3,66 @@
     width: 100%;
     background: linear-gradient(45deg, #d2001a,#7462ff,#f48e21,#23d5ab);
     background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 } */
+
+
+/* YourComponent.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .container-fluid {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #24225a, #7a6098, #49829d, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+  }
+  
+  .card {
+    width: 400px; 
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  
+  .form-control {
+    margin-bottom: 15px; 
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  
+  .form-control, .btn {
+    animation: color 12s ease-in-out infinite;
+  }
+  
+  @keyframes color {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  

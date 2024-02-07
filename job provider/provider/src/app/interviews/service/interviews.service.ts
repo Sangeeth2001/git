@@ -20,7 +20,7 @@ export class InterviewsService {
     return this.http.post<interview[]>(environment.baseurl+'Interview/company/company-user/'+jobProviderId+'/Interview',data)
   }
 
-  removeInterview(id:any){
-    return this.http.delete<interview[]>(environment.baseurl+'/api/Interview/company/company-user/'+id+'/cancel')
+  removeInterview(applicationid:any){
+    return this.http.delete<applicants[]>(environment.baseurl+'Interview/company/company-user/'+applicationid+'/cancel')
   }
 }
