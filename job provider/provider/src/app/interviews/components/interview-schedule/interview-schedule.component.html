@@ -6,12 +6,17 @@
                 <div class="card ml-3 mt-3 pt-2 pl-3 pr-3 custom-card">
                   <p class="member-info"><b>{{list.seekerUserName}}</b></p>
                   <p class="member-info">{{list.jobPostJobTitle}}</p>
-                  <p *ngFor="let list of applicationid" class="member-info">{{list.date}}</p>
-                  <div class="d-flex justify-content-end" (click)="removeInterviewlist(list.id)">
-                    <i class="bi bi-trash-fill delete-icon"></i>
-                  </div>
+                 
                 </div>
               </ng-container>
+
+              <!-- <p  class="member-info">{{list.date}}</p> -->
+              <!-- <div *ngFor="let list of applicationid" class="d-flex justify-content-end" >
+              </div> -->
+              <div *ngFor="let list of applicationid">
+                <i class="bi bi-trash-fill delete-icon" (click)="removeInterviewlist(list.applicationId)"></i>
+
+              </div>
         </div>
     </div>
 </div>
